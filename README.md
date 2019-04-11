@@ -6,11 +6,10 @@ Mission: Implement the "I want to die" multiplayer groups house rules & house ch
 Rules can be found here: https://docs.google.com/document/d/19-DfXhC3Zjr_uquxoKINgTkIWiW_4aS8HgmQLivGTHk/edit
 
 Changes:
-	None
-
-Roadmap:
 
 	Nerf spam of older ship models
+
+Roadmap:
 
 	Add PDM CBs
 
