@@ -8,10 +8,12 @@ Rules can be found here: https://docs.google.com/document/d/19-DfXhC3Zjr_uquxoKI
 Changes:
 
 	Nerf spam of older ship models
-	
+
 	Hard date limit on Healthcare reforms
 
 	Disable Iberia
+
+	Disable Greater Germany for Prussia
 
 Roadmap:
 
@@ -22,8 +24,6 @@ Roadmap:
 	Add severe penalties for going beyond 30 infamy (Your neighbours wont like this!)
 
 	1gp ally only (This one is gonna be difficult, methinks)
-
-	Disabhle Greater Germany for Prussia
 
 	Remove justifying on African Countries before Berlin Conference
 
