@@ -135,6 +135,12 @@ big_ship_competitor = {
 		}
 		clipper_transport = {
 			gun_power = -1
+		}		
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
 		}
 	}
 }
@@ -223,8 +229,22 @@ offensive_attitude = {
 		}
 		steam_transport = {
 			gun_power = -1
+		}		
+		manowar = {
+			gun_power = -1
 		}
-		
+		frigate = {
+			gun_power = -1
+		}
+		commerce_raider = {
+			gun_power = -1
+		}		
+		ironclad = {
+			gun_power = -1
+		}
+		monitor = {
+			gun_power = -1
+		}
 	}
 }
 defensive_attitude = {
@@ -277,6 +297,21 @@ decisive_firepower_doctrine = {
 		steam_transport = {
 			gun_power = -1
 		}		
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}
+		commerce_raider = {
+			gun_power = -1
+		}		
+		ironclad = {
+			gun_power = -1
+		}
+		monitor = {
+			gun_power = -1
+		}
 	}
 }
 naval_firepower_doctrine = {
@@ -301,7 +336,22 @@ naval_firepower_doctrine = {
 		}
 		steam_transport = {
 			gun_power = -1
+		}	
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}
+		commerce_raider = {
+			gun_power = -1
 		}		
+		ironclad = {
+			gun_power = -1
+		}
+		monitor = {
+			gun_power = -1
+		}	
 	}
 }
 #fleet_auxiliary_cv_doctrine = {
@@ -1002,6 +1052,12 @@ armour_piercing_projectiles = {
 		steam_transport = {
 			gun_power = -1
 		}		
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}
 	}
 }
 armour_piercing_exploding_projectiles = {
@@ -1026,7 +1082,13 @@ armour_piercing_exploding_projectiles = {
 		}
 		steam_transport = {
 			gun_power = -1
-		}		
+		}			
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}	
 		
 	}
 }
@@ -1072,7 +1134,16 @@ bomb_guns = {
 		}
 		steam_transport = {
 			gun_power = -1
-		}		
+		}				
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}
+		commerce_raider = {
+			gun_power = -1
+		}
 	}
 }
 rifled_guns = {
@@ -1097,7 +1168,16 @@ rifled_guns = {
 		}
 		steam_transport = {
 			gun_power = -1
-		}		
+		}			
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}
+		commerce_raider = {
+			gun_power = -1
+		}	
 	}
 }
 quick_firing_guns = {
@@ -1122,7 +1202,16 @@ quick_firing_guns = {
 		}
 		steam_transport = {
 			gun_power = -1
-		}		
+		}				
+		manowar = {
+			gun_power = -1
+		}
+		frigate = {
+			gun_power = -1
+		}
+		commerce_raider = {
+			gun_power = -1
+		}
 	}
 }
 armoured_citadels = {
