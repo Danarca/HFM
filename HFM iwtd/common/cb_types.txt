@@ -1221,6 +1221,7 @@ add_to_sphere = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -1231,6 +1232,7 @@ add_to_sphere = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -1244,6 +1246,7 @@ add_to_sphere = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -1254,6 +1257,7 @@ add_to_sphere = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -1714,6 +1718,7 @@ free_peoples = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -1724,6 +1729,7 @@ free_peoples = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -1737,6 +1743,7 @@ free_peoples = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -1747,6 +1754,7 @@ free_peoples = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -2119,6 +2127,7 @@ liberate_country = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -2129,6 +2138,7 @@ liberate_country = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -2142,6 +2152,7 @@ liberate_country = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -2152,6 +2163,7 @@ liberate_country = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -2492,6 +2504,7 @@ free_allied_cores = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -2502,6 +2515,7 @@ free_allied_cores = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -2515,6 +2529,7 @@ free_allied_cores = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -2525,6 +2540,7 @@ free_allied_cores = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -3655,6 +3671,7 @@ place_in_the_sun = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -3665,6 +3682,7 @@ place_in_the_sun = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -3678,6 +3696,7 @@ place_in_the_sun = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -3688,6 +3707,7 @@ place_in_the_sun = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -3797,6 +3817,7 @@ acquire_state = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -3807,6 +3828,7 @@ acquire_state = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -3820,6 +3842,7 @@ acquire_state = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -3830,6 +3853,7 @@ acquire_state = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -4288,6 +4312,7 @@ demand_concession_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -4298,6 +4323,7 @@ demand_concession_casus_belli = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -4311,6 +4337,7 @@ demand_concession_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -4321,6 +4348,7 @@ demand_concession_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -4528,6 +4556,7 @@ demand_concession_NI_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -4538,6 +4567,7 @@ demand_concession_NI_casus_belli = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -4551,6 +4581,7 @@ demand_concession_NI_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -4561,6 +4592,7 @@ demand_concession_NI_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -4734,6 +4766,7 @@ demand_concession_BC_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -4744,6 +4777,7 @@ demand_concession_BC_casus_belli = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -4757,6 +4791,7 @@ demand_concession_BC_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -4767,6 +4802,7 @@ demand_concession_BC_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -4983,6 +5019,7 @@ conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -4993,6 +5030,7 @@ conquest = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -5006,6 +5044,7 @@ conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -5016,6 +5055,7 @@ conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -5455,6 +5495,7 @@ establish_protectorate_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -5465,6 +5506,7 @@ establish_protectorate_casus_belli = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -5478,6 +5520,7 @@ establish_protectorate_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -5488,6 +5531,7 @@ establish_protectorate_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -5646,6 +5690,7 @@ establish_protectorate_NI_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -5656,6 +5701,7 @@ establish_protectorate_NI_casus_belli = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -5669,6 +5715,7 @@ establish_protectorate_NI_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -5679,6 +5726,7 @@ establish_protectorate_NI_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -5817,6 +5865,7 @@ establish_protectorate_BC_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -5827,6 +5876,7 @@ establish_protectorate_BC_casus_belli = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -5840,6 +5890,7 @@ establish_protectorate_BC_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -5850,6 +5901,7 @@ establish_protectorate_BC_casus_belli = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -6200,6 +6252,7 @@ make_puppet = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -6210,6 +6263,7 @@ make_puppet = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -6223,6 +6277,7 @@ make_puppet = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -6233,6 +6288,7 @@ make_puppet = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -7497,6 +7553,7 @@ colonial_conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -7507,6 +7564,7 @@ colonial_conquest = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -7520,6 +7578,7 @@ colonial_conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -7530,6 +7589,7 @@ colonial_conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
@@ -7731,6 +7791,7 @@ conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 				THIS = { #aggressor is not african
 					NOT = {
@@ -7741,6 +7802,7 @@ conquest = {
 							is_culture_group = southern_african
 							primary_culture = maures
 							primary_culture = sudanese
+							primary_culture = boer
 						}
 					}
 				} #berlin conference has fired
@@ -7754,6 +7816,7 @@ conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			} #OR
 			THIS = {
@@ -7764,6 +7827,7 @@ conquest = {
 					is_culture_group = southern_african
 					primary_culture = maures
 					primary_culture = sudanese
+					primary_culture = boer
 				}
 			}
 		}
