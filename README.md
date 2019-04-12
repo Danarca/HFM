@@ -15,6 +15,8 @@ Changes:
 
 	Disable Greater Germany for Prussia
 
+	Remove justifying on African Countries before Berlin Conference
+
 Roadmap:
 
 	Add PDM CBs
@@ -24,7 +26,5 @@ Roadmap:
 	Add severe penalties for going beyond 30 infamy (Your neighbours wont like this!)
 
 	1gp ally only (This one is gonna be difficult, methinks)
-
-	Remove justifying on African Countries before Berlin Conference
 
 	Redo dismantling
