@@ -1,0 +1,66 @@
+#############################
+###I want to die decisions###
+#############################
+political_decisions = {
+	access_through_suez {
+		potential = { #Only show if the following are true
+			is_independant = yes
+			NOT = {
+				owns = 1755
+			}
+			OR = { #Either you or a puppet owns Al Arish
+				owns = 1756
+				1756 = { 
+					owner = { 
+						is_our_vassal = THIS
+					}
+				}
+			}
+			OR = { #And either you or a puppet owns Dumyat
+				owns = 1746
+				1746 = { 
+					owner = { 
+						is_our_vassal = THIS
+					}
+				}
+			}
+		}
+		allow = {
+			OR = { #Either you or a puppet owns Al Arish
+				owns = 1756
+				1756 = { 
+					owner = { 
+						is_our_vassal = THIS
+					}
+				}
+			}
+			OR = { #And either you or a puppet owns Dumyat
+				owns = 1746
+				1746 = { 
+					owner = { 
+						is_our_vassal = THIS
+					}
+				}
+			}
+			NOT = { #... But you dont own Suez
+				owns = 1755
+			}
+			1756 = {
+				owner = {
+					NOT = { military_access = THIS }
+				}
+			}
+			1755 = {
+				owner = {
+					NOT = { military_access = THIS }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		effect = {
+			country_event = 42400
+		}
+	}
+}

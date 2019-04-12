@@ -1,0 +1,39 @@
+#############################
+###I want to die events   ###
+#############################
+country_event = {
+	id = 42400
+	title = "Access through the Suez"
+	desc = "Let's write a letter..."
+	is_triggered_only = yes
+	option = {
+		name = "Dear..."
+		1755 = {
+			owner = {
+				country_event = 42401
+			}
+		}
+	}
+}
+country_event = {
+	id = 42401
+	title = "Access through the Suez"
+	desc = "We have recieved a letter asking for access through the Suez, which is completely legal according to the treaty."
+	is_triggered_only = yes
+	option = {
+		name = "This seems to be in order!"
+		FROM = {
+			country_event = 42402
+		}
+	}
+}
+country_event = {
+	id = 42402
+	title = "Access through the Suez"
+	desc = "They agreed!"
+	is_triggered_only = yes
+	option = {
+		name = "Huzzah!"
+		military_access = FROM
+	}
+}
