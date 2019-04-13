@@ -4,36 +4,69 @@
 country_event = {
 	id = 42400
 	title = "Access through the Suez"
-	desc = "Let's write a letter..."
-	is_triggered_only = yes
+	desc = "We are bound by treaty to give our neighbours access through the Suez."
+	trigger = {
+		owns = 1755
+		any_neighbor_country = {
+			owns = 1756
+			owns = 1746
+			NOT = { war_with = THIS }
+			NOT = { military_access = THIS }
+		}
+	}
+	mean_time_to_happen = { days = 1 }
 	option = {
-		name = "Dear..."
-		1755 = {
+		name = "Fine"
+		1756 = {
 			owner = {
-				country_event = 42401
+				military_access = THIS
 			}
 		}
 	}
 }
 country_event = {
 	id = 42401
-	title = "Access through the Suez"
-	desc = "We have recieved a letter asking for access through the Suez, which is completely legal according to the treaty."
-	is_triggered_only = yes
+	title = "Access through the Panama Canal"
+	desc = "We are bound by treaty to give our neighbours access through the Panama Canal."
+	trigger = {
+		owns = 1723
+		any_neighbor_country = {
+			owns = 2206
+			owns = 2204
+			NOT = { war_with = THIS }
+			NOT = { military_access = THIS }
+		}
+	}
+	mean_time_to_happen = { days = 1 }
 	option = {
-		name = "This seems to be in order!"
-		FROM = {
-			country_event = 42402
+		name = "Fine"
+		2206 = {
+			owner = {
+				military_access = THIS
+			}
 		}
 	}
 }
 country_event = {
 	id = 42402
-	title = "Access through the Suez"
-	desc = "They agreed!"
-	is_triggered_only = yes
+	title = "Access through the Kiel Canal"
+	desc = "We are bound by treaty to give our neighbours access through the Kiel Canal."
+	trigger = {
+		owns = 369
+		any_neighbor_country = {
+			owns = 370
+			owns = 529
+			NOT = { war_with = THIS }
+			NOT = { military_access = THIS }
+		}
+	}
+	mean_time_to_happen = { days = 1 }
 	option = {
-		name = "Huzzah!"
-		military_access = FROM
+		name = "Fine"
+		370 = {
+			owner = {
+				military_access = THIS
+			}
+		}
 	}
 }
