@@ -17,13 +17,13 @@ Changes:
 
 	Remove justifying on African Countries before Berlin Conference
 
+	Add severe penalties for going beyond 30 infamy
+
 Roadmap:
 
 	Add PDM CBs
 
 	Remove railroading (This one is long!)
-
-	Add severe penalties for going beyond 30 infamy (Your neighbours wont like this!)
 
 	1gp ally only (This one is gonna be difficult, methinks)
 
