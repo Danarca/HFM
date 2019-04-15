@@ -1,6 +1,13 @@
 #############################
 ###I want to die events   ###
 #############################
+
+##########################
+### Canal Access #########
+##########################
+
+
+
 country_event = {
 	id = 42400
 	title = "Access through the Suez"
@@ -66,6 +73,170 @@ country_event = {
 		370 = {
 			owner = {
 				military_access = THIS
+			}
+		}
+	}
+}
+
+#########################
+### Infamy coalitions ###
+#########################
+
+country_event = {
+	## Finding a target event. This fires if
+	## you have a badboy neighbour, 
+	## You havent delayed the war,
+	## you're independent, not neutral
+	## and not at war, or have a truce with, the offender
+	id = 42404
+	title = "EVTNAME42404"
+	desc = "EVTDESC42404"
+	trigger = {
+		NOT = { has_country_modifier = delayed_coalition_war }
+		is_independant = yes
+		NOT = { has_country_modifier = neutrality }
+		great_wars_enabled = yes
+		any_neighbor_country = {
+			NOT = { war_with = THIS }
+			NOT = { truce_with = THIS }
+			badboy = 1.84 #Has infamy of 46
+		}
+	}
+	mean_time_to_happen = { 
+		days = 2
+	}
+	option = {
+		#Declare war
+		name = "EVTOPTA42404" 
+		badboy = -10
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = jingoism
+			}
+		}
+		random_country = {
+			limit = {
+				NOT = { war_with = THIS }
+				neighbour = THIS
+				badboy = 1.84 #Has infamy of 46
+			}
+			add_casus_belli = {
+				target = THIS
+				type = dismantle_cb
+				months = 6
+			}
+			country_event = 42407
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "EVTOPTB42404" #Delay war
+		badboy = 10
+		add_country_modifier = {
+			####Delaying the war causes massive unrest in the form of 1 militancy per day####
+			name = delayed_coalition_war
+			duration = 30
+		}
+	}
+}
+
+country_event = {
+	## Finding a target event. This fires if
+	## you have a badboy neighbour, 
+	## You havent delayed the war,
+	## you're independent, not neutral
+	## and not at war, or have a truce with, the offender
+	id = 42405
+	title = "EVTNAME42404"
+	desc = "EVTDESC42404"
+	trigger = {
+		NOT = { has_country_modifier = delayed_coalition_war }
+		is_independant = yes
+		NOT = { has_country_modifier = neutrality }
+		great_wars_enabled = no
+		any_neighbor_country = {
+			NOT = { war_with = THIS }
+			NOT = { truce_with = THIS }
+			badboy = 1.24 #Has infamy of 31
+		}
+	}
+	mean_time_to_happen = { 
+		days = 2
+	}
+	option = {
+		#Declare war
+		name = "EVTOPTA42404" 
+		badboy = -10
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = jingoism
+			}
+		}
+		random_country = {
+			limit = {
+				NOT = { war_with = THIS }
+				neighbour = THIS
+				badboy = 1.24 #Has infamy of 31
+			}
+			add_casus_belli = {
+				target = THIS
+				type = dismantle_cb
+				months = 6
+			}
+			country_event = 42407
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "EVTOPTB42404" #Delay war
+		badboy = 10
+		add_country_modifier = {
+			####Delaying the war causes massive unrest in the form of 1 militancy per day####
+			name = delayed_coalition_war
+			duration = 30
+		}
+	}
+}
+country_event = {
+	id = 42406
+	title = "testing choices"
+	desc = "test"
+	is_triggered_only = yes
+	option = {
+		name = "gain infamy"
+		badboy = 10
+	}
+}
+
+country_event = {
+	## The actual war event. This fires for the offender.
+	## It decreases relations, and influence if you're (likely) a great power
+	## Then it leaves the alliance with the nation who declared
+	## And finally creates a defensive war with the dismantle CB
+	id = 42407
+	title = "EVTNAME42407"
+	desc = "EVTDESC42407"
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA42407"
+		relation = { who = FROM value = -400 }
+		diplomatic_influence = { who = FROM value = -400 }
+		leave_alliance = FROM
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = {
+					casus_belli = dismantle_cb
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
 			}
 		}
 	}

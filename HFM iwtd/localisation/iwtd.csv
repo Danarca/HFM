@@ -1,3 +1,14 @@
 ;;;;;;;;;;;;;x
 access_through_suez_title;Access through the Suez;;;;;;;;;;;;;x
 access_through_suez_desc;We don't currently have access through the Suez to our holdings on the other side of it. This is a violation of the Suez treaty. We should send a stern letter.;;;;;;;;;;;;;x
+EVTNAME42404;The people demand war!;;;;;;;;;;;;;x
+EVTDESC42404;One of the great nations has comitted many a sinful deed, too many now. People all over the world are in the streets, demanding that their governments put this pariah in their place! We can either declare war, which would be looked upon with favour, or we can delay our entry into this war. There's no staying out of this one, without pissing off everybody.;;;;;;;;;;;;;x
+EVTOPTA42404;War it is!;;;;;;;;;;;;;x
+EVTOPTB42404;Let's stay out of it;;;;;;;;;;;;;x
+EVTNAME42405;The people demand war!;;;;;;;;;;;;;x
+EVTDESC42405;Our ally has comitted many a sinful deed, too many now. People all over the world are in the streets, demanding that their governments put this pariah in their place! We can either declare war, which would be looked upon with favour, or we can delay our entry into this war. There's no staying out of this one, without pissing off everybody.;;;;;;;;;;;;;x
+EVTOPTA42405;Sorry...;;;;;;;;;;;;;x
+EVTNAME42407;War declaration from $FROMCOUNTRY$;x
+EVTDESC42407;$FROMCOUNTRY$ has joined the coalition against us!;x
+EVTOPTA42407;Oh? You're approaching me?;x
+delayed_coalition_war;Delayed Coalition War;x
