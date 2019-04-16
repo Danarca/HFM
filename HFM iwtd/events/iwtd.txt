@@ -227,7 +227,9 @@ country_event = {
 		name = "EVTOPTA42407"
 		relation = { who = FROM value = -400 }
 		diplomatic_influence = { who = FROM value = -400 }
-		leave_alliance = FROM
+		any_country = {
+			leave_alliance = THIS
+		}
 		FROM = {
 			war = {
 				target = THIS
@@ -239,5 +241,6 @@ country_event = {
 				}
 			}
 		}
+		country_event = 96000
 	}
 }
