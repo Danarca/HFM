@@ -14,6 +14,7 @@ modern_sail_ships = {
 			hull = 1
 			gun_power = 1
 			maximum_speed = 1
+			supply_consumption = 0.1
 		}
 		manowar = {
 			hull = 1
@@ -138,9 +139,11 @@ big_ship_competitor = {
 		}		
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 	}
 }
@@ -232,18 +235,23 @@ offensive_attitude = {
 		}		
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.4
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.5
 		}
 		commerce_raider = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}		
 		ironclad = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 		monitor = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 	}
 }
@@ -299,18 +307,23 @@ decisive_firepower_doctrine = {
 		}		
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.5
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.6
 		}
 		commerce_raider = {
 			gun_power = -1
+			supply_consumption = 0.4
 		}		
 		ironclad = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 		monitor = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 	}
 }
@@ -336,22 +349,27 @@ naval_firepower_doctrine = {
 		}
 		steam_transport = {
 			gun_power = -1
-		}	
+		}		
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.5
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.6
 		}
 		commerce_raider = {
 			gun_power = -1
+			supply_consumption = 0.4
 		}		
 		ironclad = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 		monitor = {
 			gun_power = -1
-		}	
+			supply_consumption = 0.3
+		}
 	}
 }
 #fleet_auxiliary_cv_doctrine = {
@@ -625,6 +643,7 @@ torpedo_boats = {
 		commerce_raider = {
 			hull = 4
 			torpedo_attack = 2
+			supply_consumption = 0.1
 		}
 	}
 }
@@ -698,6 +717,7 @@ pre_dreadnought = {
 			hull = 1
 			gun_power = 1
 			maximum_speed = 1
+			supply_consumption = 0.1
 		}
 		activate_unit = battleship 
 	}
@@ -1054,9 +1074,11 @@ armour_piercing_projectiles = {
 		}		
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 	}
 }
@@ -1085,9 +1107,11 @@ armour_piercing_exploding_projectiles = {
 		}			
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}	
 		
 	}
@@ -1137,12 +1161,15 @@ bomb_guns = {
 		}				
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.4
 		}
 		commerce_raider = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 	}
 }
@@ -1171,13 +1198,16 @@ rifled_guns = {
 		}			
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.4
 		}
 		commerce_raider = {
 			gun_power = -1
-		}	
+			supply_consumption = 0.2
+		}
 	}
 }
 quick_firing_guns = {
@@ -1202,15 +1232,18 @@ quick_firing_guns = {
 		}
 		steam_transport = {
 			gun_power = -1
-		}				
+		}			
 		manowar = {
 			gun_power = -1
+			supply_consumption = 0.3
 		}
 		frigate = {
 			gun_power = -1
+			supply_consumption = 0.4
 		}
 		commerce_raider = {
 			gun_power = -1
+			supply_consumption = 0.2
 		}
 	}
 }
