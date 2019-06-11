@@ -1,3 +1,174 @@
 #############################
 ###I want to die decisions###
 #############################
+political_decisions = {
+	#################################
+	### Grossdeutchland penalties ###
+	#################################
+	reduce_gdl_military = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			has_country_modifier = gdl_military_1
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gdl_timer
+				duration = 1564
+			}
+			remove_country_modifier = gdl_military_1
+			add_country_modifier = {
+				name = gdl_military_2
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	reduce_gdl_economy = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			has_country_modifier = gdl_economic_1
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gdl_timer
+				duration = 1564
+			}
+			remove_country_modifier = gdl_economic_1
+			add_country_modifier = {
+				name = gdl_economic_2
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	reduce_gdl_social = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			has_country_modifier = gdl_social_1
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gdl_timer
+				duration = 1564
+			}
+			remove_country_modifier = gdl_social_1
+			add_country_modifier = {
+				name = gdl_social_2
+				duration = -1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	remove_gdl_military = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			has_country_modifier = gdl_military_2
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gdl_timer
+				duration = 1564
+			}
+			remove_country_modifier = gdl_military_2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	remove_gdl_economy = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			has_country_modifier = gdl_economic_2
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gdl_timer
+				duration = 1564
+			}
+			remove_country_modifier = gdl_economic_2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	remove_gdl_social = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			has_country_modifier = gdl_social_2
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gdl_timer
+				duration = 1564
+			}
+			remove_country_modifier = gdl_social_2
+		}
+		ai_will_do = { factor = 1 }
+	}
+	gdl_reforms_finished = {
+		picture = threehurrahs
+		potential = {
+			tag = GER
+			NOT = {
+				has_country_modifier = gdl_military_1
+				has_country_modifier = gdl_economic_1
+				has_country_modifier = gdl_social_1
+				has_country_modifier = gdl_military_2
+				has_country_modifier = gdl_economic_2
+				has_country_modifier = gdl_social_2
+			}
+			any_owned_province  = {
+				has_province_modifier = gdl_austrian_provinces
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = gdl_timer
+			}
+		}
+		effect = {
+		#on finishing, add south germans back and remove the province flag from provinces that has the flag
+			add_accepted_culture = south_german
+			set_country_flag = gdl_reforms_finished
+			any_owned = {
+				limit = {
+					has_province_modifier = gdl_austrian_provinces
+				}
+				add_core = GER
+				remove_province_modifier = gdl_austrian_provinces
+			}
+		}
+	}
+}

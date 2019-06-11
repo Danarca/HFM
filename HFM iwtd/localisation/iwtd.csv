@@ -11,4 +11,41 @@ EVTOPTA42405;Sorry...;;;;;;;;;;;;;x
 EVTNAME42407;War declaration from $FROMCOUNTRY$;x
 EVTDESC42407;$FROMCOUNTRY$ has joined the coalition against us!;x
 EVTOPTA42407;Oh? You're approaching me?;x
+EVTNAME42408;Alliance!;x
+EVTDESC42408;We should keep in mind that the powers-that-be only allows one ally amongst the Great Powers...;x
+EVTOPTA42408;Naturally!;x
+EVTNAME42409;Alliance not feasible;x
+EVTDESC42409;The alliance we brokered is not allowed by the rest of the Great Powers, we have to break it off.;x
+EVTOPTA42409;Oh... Darn it.;x
+EVTNAME42409;Alliance broken!;x
+EVTDESC42409;The alliance we brokered have been broken, we can now look for a new ally amongst the Great Powers.;x
+EVTOPTA42409;New enemies, new friends.;x
 delayed_coalition_war;Delayed Coalition War;x
+EVTNAME42411;We are drowning in Glory!;x
+EVTDESC42411;Integrating Austria has had some nasty side-effects on our military, on our economy and on the minds of our people.\nWe should reform ourselves over the coming decades, if we want to win back the trust of our people, and that of our neighbours. ;x
+EVTOPTA42411;Maybe this was a bad idea...;x
+EVTNAME42412;Loss of Austrian clay;x
+EVTDESC42412;With the loss of the Austrian territories, people are getting over our aquisition of them in the first place.;x
+EVTOPTA42412;When life gives you lemons...;x
+gdl_military_1;Grossdeutchland Military Penalty;x
+gdl_military_2;Reduced Grossdeutchland Military Penalty;x
+gdl_economic_1;Grossdeutchland Economic Penalty;x
+gdl_economic_2;Reduced Grossdeutchland Economic Penalty;x
+gdl_social_1;Grossdeutchland Social Penalty;x
+gdl_social_2;Reduced Grossdeutchland Social Penalty;x
+gdl_timer;Grossdeutchland Timer;x
+gdl_austrian_provinces;Former Austrian Province;x
+reduce_gdl_military_title;Reduce Military Penalties;x
+reduce_gdl_economy_title;Reduce Economic Penalties;x
+reduce_gdl_social_title;Reduce Social Penalties;x
+remove_gdl_military_title;Remove Military Penalties;x
+remove_gdl_economy_title;Remove Economic Penalties;x
+remove_gdl_social_title;Remove Social Penalties;x
+reduce_gdl_military_desc;By integrating the German and Austrian militaries we can reduce some of these penalties that currently have to live with.;x
+reduce_gdl_economy_desc;By integrating the German and Austrian economies we can reduce some of these penalties that currently have to live with.;x
+reduce_gdl_social_desc;By integrating the Austrian people we can reduce some of these penalties that currently have to live with.;x
+remove_gdl_military_desc;By integrating the German and Austrian militaries we can remove some of these penalties that currently have to live with.;x
+remove_gdl_economy_desc;By integrating the German and Austrian economies we can remove some of these penalties that currently have to live with.;x
+remove_gdl_social_desc;By integrating the Austrian people we can remove some of these penalties that currently have to live with.;x
+gdl_reforms_finished_title;Finish Reforms;x
+gdl_reforms_finished_desc;After many years, we have finally integrated Austria into Germany, this is a glorious day!;x

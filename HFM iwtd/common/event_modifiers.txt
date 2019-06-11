@@ -3281,3 +3281,73 @@ delayed_coalition_war = {
 	global_pop_militancy_modifier = 30 
 	icon = 18
 }
+gdl_timer = {
+	icon = 4
+}
+gdl_austrian_provinces = {
+	icon = 8
+}
+gdl_military_1 = {
+	icon = 16
+	land_organisation = -0.15 #-15% to organisation
+	naval_organisation = -0.15 # and to ships
+	land_unit_start_experience = -15 #to starting experience
+	naval_unit_start_experience = -15 #and to ships
+	leadership_modifier = -0.15 #-15% leadership points
+	mobilisation_size = -0.15 #-15% mobilised forces
+	org_regain = -0.5 #50% less org gain each month - may need testing
+	supply_consumption = 0.35 #35% more expensive to field units
+}
+gdl_military_2 = {
+	icon = 16
+	land_organisation = -0.075
+	naval_organisation = -0.075
+	land_unit_start_experience = -7.5
+	naval_unit_start_experience = -7.5
+	leadership_modifier = -0.075
+	mobilisation_size = -0.075
+	org_regain = -0.25
+	supply_consumption = 0.175
+}
+gdl_economic_1 = {
+	icon = 10
+	max_loan_modifier = -0.5 #can only take half the normal loan size
+	max_military_spending = -0.15 #-15% max military spending
+	tax_efficiency = -0.15 #-15% less taxes gathered
+	import_cost = 0.15 #imported goods are 15% more expensive
+	factory_throughput = -0.15 #-15% throughput in factories
+	factory_cost = 0.15 #15% more expensive factories
+	mobilization_economy_impact = 0.15 #15% more impact on economy when mobilised.. Needs testing
+}
+gdl_economic_2 = {
+	icon = 10
+	max_loan_modifier = -0.25
+	max_military_spending = -0.075
+	tax_efficiency = -0.075
+	import_cost = 0.075
+	factory_throughput = -0.075
+	factory_cost = 0.075
+	mobilization_economy_impact = 0.075
+}
+gdl_social_1 = {
+	icon = 18
+	education_efficiency_modifier = -0.25 #-25% efficiency on education
+	diplomatic_points_modifier = -0.5 #only half the diplo points, people are fucking hating this
+	political_reform_desire = 0.25% #we want change!
+	social_reform_desire = 0.25 #and more welfare!
+	research_points_modifier = -0.20 #-20% change in research points
+	goods_demand = 0.15 # we want more goods, now that we're a big boy
+	global_pop_militancy_modifier = 3 #0.10 militancy per day added
+	global_pop_consciousness_modifier = 3 #0.10 consciousness per day added
+}
+gdl_social_2 = {
+	icon = 18
+	education_efficiency_modifier = -0.125
+	diplomatic_points_modifier = -0.25
+	political_reform_desire = 0.125
+	social_reform_desire = 0.125
+	research_points_modifier = -0.10
+	goods_demand = 0.075
+	global_pop_militancy_modifier = 1.5
+	global_pop_consciousness_modifier = 1.5
+}

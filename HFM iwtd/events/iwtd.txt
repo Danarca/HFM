@@ -212,12 +212,16 @@ country_event = {
 		name = "gain infamy"
 		badboy = 10
 	}
+	option = {
+		name = "lose infamy"
+		badboy = -10
+	}
 }
 
 country_event = {
 	## The actual war event. This fires for the offender.
 	## It decreases relations, and influence if you're (likely) a great power
-	## Then it leaves the alliance with the nation who declared
+	## Oh yeah, and just to be sure of no mishaps, it cancels ALL alliances the offender might have
 	## And finally creates a defensive war with the dismantle CB
 	id = 42407
 	title = "EVTNAME42407"
@@ -244,3 +248,182 @@ country_event = {
 		country_event = 96000
 	}
 }
+
+###################################
+##### Grossdeutchland forming #####
+###################################
+
+country_event = {
+	id = 42411
+	title = "EVTNAME42411"
+	desc = "EVTDESC42411"
+	picture = "threehurrahs"
+	trigger = {
+		tag = GER
+		has_global_flag = austria_joined_germany
+		NOT = { has_country_flag = grossdeutchland_penalties }
+		NOT = { has_country_flag = gdl_reforms_finished }
+		any_core = {
+			OR = {
+				is_core = AUS
+				is_core = KUK
+				is_core = SLO
+				is_core = CRO
+				is_core = CZH
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days =  1
+	}
+	option = {
+		name = "EVTOPTA42411"
+		remove_accepted_culture = south_german
+		set_country_flag = grossdeutchland_penalties
+		add_country_modifier = {
+			name = gdl_timer
+			duration = 1564
+		}
+		add_country_modifier = {
+			name = gdl_military_1
+			duration = -1
+		}
+		add_country_modifier = {
+			name = gdl_economic_1
+			duration = -1
+		}
+		add_country_modifier = {
+			name = gdl_social_1
+			duration = -1
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = AUS
+					is_core = KUK
+					is_core = SLO
+					is_core = CRO
+					is_core = CZH
+				}
+			}
+			infrastructure  = -10
+			remove_core = GER
+			add_province_modifier = {
+				name = gdl_austrian_provinces
+				duration = -1
+			}
+		}
+	}
+}
+######################################
+### If Germany loses Austrian clay ###
+######################################
+country_event = {
+	id = 42412
+	title = "EVTNAME42412"
+	desc = "EVTDESC42412"
+	picture = "threehurrahs"
+	trigger = {
+		tag = GER
+		has_global_flag = austria_joined_germany
+		has_country_flag = grossdeutchland_penalties
+		NOT = { has_country_flag = gdl_reforms_finished }
+		NOT = { 
+			GER = {
+				any_owned_province = {
+					 has_province_modifier = gdl_austrian_provinces }
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { days = 5 }
+	option = {
+		name = "EVTOPTA42412"
+		add_accepted_culture = south_german
+		remove_country_modifier = gdl_military_1
+		remove_country_modifier = gdl_military_2
+		remove_country_modifier = gdl_economic_1
+		remove_country_modifier = gdl_economic_2
+		remove_country_modifier = gdl_social_1
+		remove_country_modifier = gdl_social_2
+		clr_country_flag = grossdeutchland_penalties
+	}
+}
+
+########################
+##### GP Alliances #####
+########################
+
+# country_event = {
+	# id = 42408
+	# title = "EVTNAME42408"
+	# desc = "EVTDESC42408"
+
+	# ### Fires if both allies doesn't have flag
+
+	# trigger = {
+		# is_greater_power = yes
+		# NOT = { has_country_flag = allied_with_gp }
+		# any_greater_power = {
+			# alliance_with = THIS
+			# NOT = { has_country_flag = allied_with_gp }
+		# }
+	# }
+	# mean_time_to_happen = { days = 1 }
+	# option = {
+		# name = "EVTOPTA42408"
+		# set_country_flag = allied_with_gp
+		# any_greater_power = {
+			# limit = {
+				# alliance_with = THIS
+				# NOT = { has_country_flag = allied_with_gp }
+			# }
+			# set_country_flag = allied_with_gp
+		# }
+	# }
+# }
+# country_event = {
+	# id = 42409
+	# title = "EVTNAME42409"
+	# desc = "EVTDESC42409"
+
+	# ### Fires if THIS country has an ally, doesn't have the flag, while scope country already has the flag
+
+	# trigger = {
+		# is_greater_power = yes
+		# NOT = { has_country_flag = allied_with_gp }
+		# any_greater_power = {
+			# alliance_with = THIS
+			# has_country_flag = allied_with_gp
+		# }
+	# }
+	# mean_time_to_happen = { days = 1 }
+	# option = {
+		# name = "EVTOPTA42409"
+		# any_greater_power = {
+			# limit = {
+				# alliance_with = THIS
+				# has_country_flag = allied_with_gp
+			# }
+			# leave_alliance = THIS
+		# }
+	# }
+# }
+# country_event = {
+	# id = 42410
+	# title = "EVTNAME42410"
+	# desc = "EVTDESC42410"
+
+	# ### Fires if a country with the flag suddenly doesn't have an ally
+
+	# trigger = {
+		# is_greater_power = yes
+		# has_country_flag = allied_with_gp
+		# NOT = { any_greater_power = { alliance_with = THIS }
+	# }
+	# mean_time_to_happen = { days = 1 }
+	# option = {
+		# name = "EVTOPTA42410"
+		# clr_country_flag = allied_with_gp
+	# }
+# # }
