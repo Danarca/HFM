@@ -13,11 +13,13 @@ Changes:
 
 	Disable Iberia
 
-	Disable Greater Germany for Prussia
+	Disable Greater Grossdeutchland for Prussia (Germany+Austria+Hungary)
 
 	Remove justifying on African Countries before Berlin Conference
 
 	Add severe penalties for going beyond 30 infamy
+	
+	Added penalties for forming Grossdeutchland as Prussia/Germany
 
 Roadmap:
 
