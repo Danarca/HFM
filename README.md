@@ -19,7 +19,7 @@ Changes:
 
 	Add severe penalties for going beyond 30 infamy
 	
-	Added penalties for forming Grossdeutchland as Prussia/Germany
+	Added penalties for forming Grossdeutchland as Prussia/Germany (These are removed gradually over 30 years)
 
 Roadmap:
 
