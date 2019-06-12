@@ -3337,8 +3337,8 @@ gdl_social_1 = {
 	social_reform_desire = 0.25 #and more welfare!
 	research_points_modifier = -0.20 #-20% change in research points
 	goods_demand = 0.15 # we want more goods, now that we're a big boy
-	global_pop_militancy_modifier = 3 #0.10 militancy per day added
-	global_pop_consciousness_modifier = 3 #0.10 consciousness per day added
+	global_pop_militancy_modifier = 0.8 #0.10 militancy per day added
+	global_pop_consciousness_modifier = 0.8 #0.10 consciousness per day added
 }
 gdl_social_2 = {
 	icon = 18
@@ -3348,6 +3348,6 @@ gdl_social_2 = {
 	social_reform_desire = 0.125
 	research_points_modifier = -0.10
 	goods_demand = 0.075
-	global_pop_militancy_modifier = 1.5
-	global_pop_consciousness_modifier = 1.5
+	global_pop_militancy_modifier = 0.4
+	global_pop_consciousness_modifier = 0.4
 }
