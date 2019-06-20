@@ -248,108 +248,6 @@ country_event = {
 		country_event = 96000
 	}
 }
-
-###################################
-##### Grossdeutchland forming #####
-###################################
-
-country_event = {
-	id = 42411
-	title = "EVTNAME42411"
-	desc = "EVTDESC42411"
-	picture = "threehurrahs"
-	trigger = {
-		tag = GER
-		has_global_flag = austria_joined_germany
-		NOT = { has_country_flag = grossdeutchland_penalties }
-		NOT = { has_country_flag = gdl_reforms_finished }
-		any_core = {
-			OR = {
-				is_core = AUS
-				is_core = KUK
-				is_core = SLO
-				is_core = CRO
-				is_core = CZH
-			}
-		}
-	}
-	mean_time_to_happen = {
-		days =  1
-	}
-	option = {
-		name = "EVTOPTA42411"
-		remove_accepted_culture = south_german
-		set_country_flag = grossdeutchland_penalties
-		add_country_modifier = {
-			name = gdl_timer
-			duration = 1564
-		}
-		add_country_modifier = {
-			name = gdl_military_1
-			duration = -1
-		}
-		add_country_modifier = {
-			name = gdl_economic_1
-			duration = -1
-		}
-		add_country_modifier = {
-			name = gdl_social_1
-			duration = -1
-		}
-		any_owned = {
-			limit = {
-				OR = {
-					is_core = AUS
-					is_core = KUK
-					is_core = SLO
-					is_core = CRO
-					is_core = CZH
-				}
-			}
-			infrastructure  = -10
-			remove_core = GER
-			add_province_modifier = {
-				name = gdl_austrian_provinces
-				duration = -1
-			}
-		}
-	}
-}
-######################################
-### If Germany loses Austrian clay ###
-######################################
-country_event = {
-	id = 42412
-	title = "EVTNAME42412"
-	desc = "EVTDESC42412"
-	picture = "threehurrahs"
-	trigger = {
-		tag = GER
-		has_global_flag = austria_joined_germany
-		has_country_flag = grossdeutchland_penalties
-		NOT = { has_country_flag = gdl_reforms_finished }
-		NOT = { 
-			GER = {
-				any_owned_province = {
-					 has_province_modifier = gdl_austrian_provinces }
-				}
-			}
-		}
-	}
-	mean_time_to_happen = { days = 5 }
-	option = {
-		name = "EVTOPTA42412"
-		add_accepted_culture = south_german
-		remove_country_modifier = gdl_military_1
-		remove_country_modifier = gdl_military_2
-		remove_country_modifier = gdl_economic_1
-		remove_country_modifier = gdl_economic_2
-		remove_country_modifier = gdl_social_1
-		remove_country_modifier = gdl_social_2
-		clr_country_flag = grossdeutchland_penalties
-	}
-}
-
 ########################
 ##### GP Alliances #####
 ########################
@@ -427,3 +325,182 @@ country_event = {
 		# clr_country_flag = allied_with_gp
 	# }
 # # }
+
+###################################
+##### Grossdeutchland forming #####
+###################################
+
+country_event = {
+	id = 42411
+	title = "EVTNAME42411"
+	desc = "EVTDESC42411"
+	picture = "threehurrahs"
+	trigger = {
+		tag = GER
+		has_global_flag = austria_joined_germany
+		NOT = { has_country_flag = grossdeutchland_penalties }
+		NOT = { has_country_flag = gdl_reforms_finished }
+		any_core = {
+			OR = {
+				is_core = AUS
+				is_core = KUK
+				is_core = SLO
+				is_core = CRO
+				is_core = CZH
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days =  1
+	}
+	option = {
+		name = "EVTOPTA42411"
+		remove_accepted_culture = south_german
+		set_country_flag = grossdeutchland_penalties
+		add_country_modifier = {
+			name = gdl_timer
+			duration = 1564
+		}
+		add_country_modifier = {
+			name = gdl_military_1
+			duration = -1
+		}
+		add_country_modifier = {
+			name = gdl_economic_1
+			duration = -1
+		}
+		add_country_modifier = {
+			name = gdl_social_1
+			duration = -1
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = AUS
+					is_core = KUK
+					is_core = SLO
+					is_core = CRO
+					is_core = CZH
+				}
+			}
+			infrastructure  = -10
+			remove_core = GER
+			add_province_modifier = {
+				name = gdl_austrian_provinces
+				duration = -1
+			}
+		}
+		any_country = {
+			limit = {
+				is_greater_power = yes
+			}
+			country_event = 42413
+		}
+	}
+}
+######################################
+### If Germany loses Austrian clay ###
+######################################
+country_event = {
+	id = 42412
+	title = "EVTNAME42412"
+	desc = "EVTDESC42412"
+	picture = "threehurrahs"
+	trigger = {
+		tag = GER
+		has_global_flag = austria_joined_germany
+		has_country_flag = grossdeutchland_penalties
+		NOT = { has_country_flag = gdl_reforms_finished }
+		NOT = { 
+			GER = {
+				any_owned_province = {
+					 has_province_modifier = gdl_austrian_provinces
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { days = 5 }
+	option = {
+		name = "EVTOPTA42412"
+		add_accepted_culture = south_german
+		remove_country_modifier = gdl_military_1
+		remove_country_modifier = gdl_military_2
+		remove_country_modifier = gdl_economic_1
+		remove_country_modifier = gdl_economic_2
+		remove_country_modifier = gdl_social_1
+		remove_country_modifier = gdl_social_2
+		clr_country_flag = grossdeutchland_penalties
+		country_event = 42414
+	}
+}
+
+
+##############################################################
+### Dismantlement Event for greater powers against Germany ###
+##############################################################
+country_event = {
+	id = 42413
+	title = "EVTNAME42413"
+	desc = "EVTDESC42413"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	option = {
+		name = "EVTOPTA42413"
+		casus_belli = {
+			target = FROM
+			type = dismantle_ger
+			months = 52
+		}
+	}
+}
+
+##############################
+### Dissolution of Germany ###
+##############################
+country_event = {
+	id = 42414
+	title = "EVTNAME42414"
+	desc = "EVTDESC42414"
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = "EVTOPTA42414"
+		release = SWI
+		any_owned = {
+			limit = {
+				culture = south_german
+			}
+			add_core = SGF
+			remove_core = GER
+		}
+		release = SGF
+		change_tag = NGF
+		any_owned = {
+			remove_core = GER
+		}
+		prestige = -10000
+		any_country = {
+			diplomatic_influence = {
+				who = NGF
+				value = -200
+			}
+			diplomatic_influence = {
+				who = SGF
+				value = -200
+			}
+		}
+		NGF = {
+			add_country_modifier = {
+				name = ger_dissolved
+				duration = 3560
+			}
+		}
+		SGF = {
+			add_country_modifier = {
+				name = ger_dissolved
+				duration = 3560
+			}
+		}
+		set_global_flag = ger_dissolved
+	}
+}

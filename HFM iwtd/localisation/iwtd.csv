@@ -27,13 +27,22 @@ EVTOPTA42411;Maybe this was a bad idea...;x
 EVTNAME42412;Loss of Austrian clay;x
 EVTDESC42412;With the loss of the Austrian territories, people are getting over our aquisition of them in the first place.;x
 EVTOPTA42412;When life gives you lemons...;x
-gdl_military_1;Grossdeutchland Military Penalty;x
-gdl_military_2;Reduced Grossdeutchland Military Penalty;x
-gdl_economic_1;Grossdeutchland Economic Penalty;x
-gdl_economic_2;Reduced Grossdeutchland Economic Penalty;x
-gdl_social_1;Grossdeutchland Social Penalty;x
-gdl_social_2;Reduced Grossdeutchland Social Penalty;x
-gdl_timer;Grossdeutchland Timer;x
+EVTNAME42413;A Global Threat;x
+EVTDESC42413;Germany is rapidly becoming an even greater threat, perhaps we should put them in the ground while we have the chance?;x
+EVTOPTA42413;A Just Cause!;x
+EVTNAME42414;The Dissolution of Germany;x
+EVTDESC42414;After the unsuccesful unification of all German people, the nation of Germany is no more. Instead, they will be split along North German, Austrian and South German lines.;x
+EVTOPTA42414;The end of a Dream;x
+gdl_military_1;Großdeutschland Military Penalty;x
+gdl_military_2;Reduced Großdeutschland Military Penalty;x
+gdl_economic_1;Großdeutschland Economic Penalty;x
+gdl_economic_2;Reduced Großdeutschland Economic Penalty;x
+gdl_social_1;Großdeutschland Social Penalty;x
+gdl_social_2;Reduced Großdeutschland Social Penalty;x
+gdl_timer;Großdeutschland Timer;x
+gdl_timer_desc;When this is done, you can reform again.;x
+ger_dissolved;Germany Dissolved;x
+ger_dissolved_desc;Germany has been dissolved, we have been defeated...;x
 gdl_austrian_provinces;Former Austrian Province;x
 reduce_gdl_military_title;Reduce Military Penalties;x
 reduce_gdl_economy_title;Reduce Economic Penalties;x
@@ -49,3 +58,17 @@ remove_gdl_economy_desc;By integrating the German and Austrian economies we can 
 remove_gdl_social_desc;By integrating the Austrian people we can remove some of these penalties that currently have to live with.;x
 gdl_reforms_finished_title;Finish Reforms;x
 gdl_reforms_finished_desc;After many years, we have finally integrated Austria into Germany, this is a glorious day!;x
+ger_cores_return_title;Begin die Rückeroberung;x
+ger_cores_return_desc;Our People has been clamoring for the concept of die Rückeroberung, the Reconquest.\nThe first Phase will simply be re-uniting the German Federations, into the Germany of old...;x
+ger_reunification_title;Continuation of die Rückeroberung;x
+ger_reunification_desc;With the heartland of Germany unified, we can defy the Treaty of Berlin and re-declare the formation of Germany!\nHowever, lot of work lay ahead of us...;x
+ger_return_cores_title;Finish die Rückeroberung;x
+ger_return_cores_desc;We have conquered the petty remnants of the Treaty of Berlin.\nWe can now force the Great Powers to accept our claims!;x
+dismantle_ger;Dismantle Germany;x
+dismantle_ger_desc;Force Germany to split up;x
+dismantle_ger_setup;Germany will cease to exist;x
+dismantle_ger_short;Dismantle Germany;x
+restore_german_empire;Die Rückeroberung;x
+restore_german_empire_desc;Conquer former German state;x
+restore_german_empire_setup;Die Rückeroberung continues;x
+restore_german_empire_short;Die Rückeroberung;x

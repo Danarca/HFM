@@ -3287,6 +3287,9 @@ gdl_timer = {
 gdl_austrian_provinces = {
 	icon = 8
 }
+ger_dissolved = {
+	icon = 4
+}
 gdl_military_1 = {
 	icon = 16
 	land_organisation = -0.15 #-15% to organisation

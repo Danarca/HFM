@@ -6,7 +6,7 @@ political_decisions = {
 	### Grossdeutchland penalties ###
 	#################################
 	reduce_gdl_military = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			has_country_modifier = gdl_military_1
@@ -26,11 +26,17 @@ political_decisions = {
 				name = gdl_military_2
 				duration = -1
 			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+				}
+				country_event = 42413
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	reduce_gdl_economy = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			has_country_modifier = gdl_economic_1
@@ -50,11 +56,17 @@ political_decisions = {
 				name = gdl_economic_2
 				duration = -1
 			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+				}
+				country_event = 42413
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	reduce_gdl_social = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			has_country_modifier = gdl_social_1
@@ -74,11 +86,17 @@ political_decisions = {
 				name = gdl_social_2
 				duration = -1
 			}
+			any_country = {
+				limit = {
+					is_greater_power = yes
+				}
+				country_event = 42413
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	remove_gdl_military = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			has_country_modifier = gdl_military_2
@@ -94,11 +112,17 @@ political_decisions = {
 				duration = 1564
 			}
 			remove_country_modifier = gdl_military_2
+			any_country = {
+				limit = {
+					is_greater_power = yes
+				}
+				country_event = 42413
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	remove_gdl_economy = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			has_country_modifier = gdl_economic_2
@@ -114,11 +138,17 @@ political_decisions = {
 				duration = 1564
 			}
 			remove_country_modifier = gdl_economic_2
+			any_country = {
+				limit = {
+					is_greater_power = yes
+				}
+				country_event = 42413
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	remove_gdl_social = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			has_country_modifier = gdl_social_2
@@ -134,11 +164,17 @@ political_decisions = {
 				duration = 1564
 			}
 			remove_country_modifier = gdl_social_2
+			any_country = {
+				limit = {
+					is_greater_power = yes
+				}
+				country_event = 42413
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}
 	gdl_reforms_finished = {
-		picture = threehurrahs
+		picture = black_stain
 		potential = {
 			tag = GER
 			NOT = {
@@ -170,5 +206,244 @@ political_decisions = {
 				remove_province_modifier = gdl_austrian_provinces
 			}
 		}
+		ai_will_do = { factor = 1 }
+	}
+	##############################
+	### Reformation of Germany ###
+	##############################
+	ger_cores_return = {
+		picture = greatwar
+		potential = {
+			has_global_flag = ger_dissolved
+			OR = {
+				tag = SGF
+				tag = NGF
+			}
+			NOT = {
+				OR = {
+					NGF = {
+						any_core = {
+							is_core = GER
+						}
+					}
+					SGF = {
+						any_core = {
+							is_core = GER
+						}
+					}
+				}
+			}
+			NOT = { exists = GER }
+		}
+		allow = {
+			prestige = 45
+			is_independant = yes
+			war = no
+			nationalism_n_imperialism = 1
+			NOT = { has_country_modifier = ger_dissolved }
+			OR = {
+				AND = {
+					ideology = fascist
+					government = fascist_dictatorship
+				}
+				AND = {
+					ideology = reactionary
+					OR = {
+						government = presidential_dictatorship
+						government = absolute_monarchy
+					}
+				}
+			}
+		}
+		effect = {
+			NGF = {
+				all_core = {
+					add_core = GER
+				}
+			}
+			SGF = {
+				all_core = {
+					add_core = GER
+				}
+			}
+			badboy = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+	ger_reunification = {
+		picture = greatwar
+		major = yes
+		potential = {
+			has_global_flag = ger_dissolved
+			OR = {
+				tag = NGF
+				tag = SGF
+			}
+			NGF = {
+				any_core = {
+					is_core = GER
+				}
+			}
+			SGF = {
+				any_core = {
+					is_core = GER
+				}
+			}
+		}
+		allow = {
+			prestige = 90
+			is_independant = yes
+			nationalism_n_imperialism = 1
+			war = no
+			NOT = { has_country_modifier = ger_dissolved }
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+							war = no
+							is_greater_power = no
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					ideology = fascist
+					government = fascist_dictatorship
+				}
+				AND = {
+					ideology = reactionary
+					OR = {
+						government = presidential_dictatorship
+						government = absolute_monarchy
+					}
+				}
+			}
+		}
+		effect = {
+			GER = {
+				all_core = {
+					secede_province = THIS
+				}
+			}
+			change_tag = GER
+			inherit = NGF
+			inherit = SGF
+			badboy = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+	ger_return_cores = {
+		picture = greatwar
+		major = yes
+		potential = {
+			tag = GER
+			has_global_flag = ger_dissolved
+			NOT = {
+				exists = NGF
+				exists = SGF
+			}
+			### Fire only once
+			NOT = { has_global_flag = ger_reunified }
+		}
+		allow = {
+			prestige = 135
+			is_independant = yes
+			nationalism_n_imperialism = 1
+			war = no
+			NOT = { has_country_modifier = ger_dissolved }
+			OR = {
+				AND = {
+					ideology = fascist
+					government = fascist_dictatorship
+				}
+				AND = {
+					ideology = reactionary
+					OR = {
+						government = presidential_dictatorship
+						government = absolute_monarchy
+					}
+				}
+			}
+			### There should be NO targets of the special CB
+			NOT = {
+				any_neighbor_country = {
+					any_owned_province = {
+						OR = {
+							is_core = GER 
+							region = HAN_528
+							region = HAN_534
+							region = HAN_540
+							region = PRU_544
+							region = PRU_546
+							region = PRU_549
+							region = PRU_553
+							region = PRU_554
+							region = SAX_558
+							region = HES_2560
+							region = PRU_570
+							region = PRU_575
+							region = PRU_578
+							region = PRU_581
+							region = BAD_586
+							region = WUR_589
+							region = BAV_595
+							region = BAV_599
+							region = PRU_682
+							region = PRU_690
+							region = PRU_695
+							region = PRU_701
+							region = HOL_369
+							region = SCH_370
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			### Grants cores on the following states
+			GER = {
+				any_owned = {
+					limit = {
+						OR = {
+							region = HAN_528
+							region = HAN_534
+							region = HAN_540
+							region = PRU_544
+							region = PRU_546
+							region = PRU_549
+							region = PRU_553
+							region = PRU_554
+							region = SAX_558
+							region = HES_2560
+							region = PRU_570
+							region = PRU_575
+							region = PRU_578
+							region = PRU_581
+							region = BAD_586
+							region = WUR_589
+							region = BAV_595
+							region = BAV_599
+							region = PRU_682
+							region = PRU_690
+							region = PRU_695
+							region = PRU_701
+							region = HOL_369
+							region = SCH_370
+						}
+					}
+					add_core = GER
+				}
+			}
+			set_global_flag = ger_reunified
+			badboy = 10
+		}
+		ai_will_do = { factor = 1 }
 	}
 }

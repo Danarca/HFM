@@ -42,12 +42,14 @@ peace_order = {
 treaty_port_casus_belli
 war_reparations
 become_independent
+dismantle_ger
 dismantle_cb
 dismantle_cb_add
 dismantle_cb_add_new
 colonial_competition
 acquire_all_cores
 acquire_core_state
+restore_german_empire
 restore_austrian_empire
 colonial_reconquest_cb
 restore_america
@@ -7885,4 +7887,198 @@ conquest = {
 	po_annex = yes
 	
 	war_name = WAR_CONQUEST_NAME
+}
+
+dismantle_ger = {
+	sprite_index = 20
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	construction_speed = 0.25
+
+	badboy_factor = 2
+	prestige_factor = 10
+	peace_cost_factor = 35
+	penalty_factor = 3
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 3
+	break_truce_militancy_factor = 1
+	truce_months = 108
+	
+	good_relation_prestige_factor = 0
+	good_relation_infamy_factor = 0
+	good_relation_militancy_factor = 0
+	
+	can_use = {
+		OR = {
+			is_greater_power = yes
+			is_secondary_power = yes
+			colonial_nation = yes
+			any_owned_province = { is_overseas = yes }
+		}	
+		is_disarmed = no
+		is_vassal = no
+		NOT = { is_our_vassal = THIS }
+		NOT = { has_country_flag = dismantle_declared }
+		OR = {
+			has_country_modifier = gdl_military_1
+			has_country_modifier = gdl_economic_1
+			has_country_modifier = gdl_social_1
+			has_country_modifier = gdl_military_2
+			has_country_modifier = gdl_economic_2
+			has_country_modifier = gdl_social_2
+		}
+		THIS = {
+			NOT = { has_country_flag = in_great_war }
+			NOT = { has_country_modifier = no_more_war }
+		}
+		THIS = { NOT = { has_country_modifier = neutrality } }
+	}
+	
+	po_disarmament = yes
+	po_reparations = yes
+	
+	war_name = WAR_DISMANTLE_NAME
+	
+	on_add = {
+		FROM = {
+			set_country_flag = dismantle_declared
+		}
+		move_issue_percentage = { 
+			from = pro_military 
+			to = jingoism
+			value = 0.10
+		}
+		country_event = 96000
+	}
+	
+	on_po_accepted = {
+		set_country_flag = dismantling_treaty
+	}
+}
+restore_german_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		has_global_flag = ger_dissolved
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = NGF
+				tag = SGF
+				tag = GER
+			}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		is_vassal = no
+		neighbour = THIS
+		any_owned_province = {
+			OR = {
+				is_core = GER
+				region = HAN_528
+				region = HAN_534
+				region = HAN_540
+				region = PRU_544
+				region = PRU_546
+				region = PRU_549
+				region = PRU_553
+				region = PRU_554
+				region = SAX_558
+				region = HES_2560
+				region = PRU_570
+				region = PRU_575
+				region = PRU_578
+				region = PRU_581
+				region = BAD_586
+				region = WUR_589
+				region = BAV_595
+				region = BAV_599
+				region = PRU_682
+				region = PRU_690
+				region = PRU_695
+				region = PRU_701
+				region = HOL_369
+				region = SCH_370
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				is_core = GER
+				region = HAN_528
+				region = HAN_534
+				region = HAN_540
+				region = PRU_544
+				region = PRU_546
+				region = PRU_549
+				region = PRU_553
+				region = PRU_554
+				region = SAX_558
+				region = HES_2560
+				region = PRU_570
+				region = PRU_575
+				region = PRU_578
+				region = PRU_581
+				region = BAD_586
+				region = WUR_589
+				region = BAV_595
+				region = BAV_599
+				region = PRU_682
+				region = PRU_690
+				region = PRU_695
+				region = PRU_701
+				region = HOL_369
+				region = SCH_370
+			}
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
 }
