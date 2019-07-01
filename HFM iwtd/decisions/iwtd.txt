@@ -272,7 +272,6 @@ political_decisions = {
 	}
 	ger_reunification = {
 		picture = greatwar
-		major = yes
 		potential = {
 			has_global_flag = ger_dissolved
 			OR = {
@@ -341,7 +340,6 @@ political_decisions = {
 	}
 	ger_return_cores = {
 		picture = greatwar
-		major = yes
 		potential = {
 			tag = GER
 			has_global_flag = ger_dissolved
@@ -445,5 +443,1406 @@ political_decisions = {
 			badboy = 10
 		}
 		ai_will_do = { factor = 1 }
+	}
+	### United South America Dismantlement Stuff ###
+	ussa_unite_brazil = {
+		potential = {
+			tag = USS
+			primary_culture = brazilian
+			has_country_flag = got_dismantled
+			BRZ = {
+				exists = yes
+			}
+		}
+		allow = {
+			NOT = {
+				BRZ = {
+					has_country_flag = uss_successor
+				}
+			}
+		}
+		effect = {
+			change_tag_no_core_switch = BRZ
+			BRZ = {
+				set_country_flag = uss_successor
+			}
+		}
+	}
+	brazil_inherit_uss = {
+		potential = {
+			tag = BRZ
+			USS = {
+				exists = yes
+			}
+			has_country_flag = uss_successor
+		}
+		allow = {
+			USS = {
+				exists = yes
+			}
+		}
+		effect = {
+			inherit = USS
+		}
+	}
+	### Regain cores after finishing restoration CBs
+	britain_regain_cores = {
+		picture = reform_the_UK
+		potential = {
+			OR = {
+				tag = ENG
+				tag = ENL
+			}
+			has_global_flag = british_dismantled
+			OR = {
+				NOT = {
+					SCO = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					IRE = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					WHA = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			THIS = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						province_id = 517
+						province_id = 419
+					}
+				}
+			}
+			SCO = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			IRE = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			WHA = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		effect = {
+			ENG = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			ENL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SCO = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			IRE = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			WHA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+		}	
+	}
+	russia_regain_cores = {
+		potential = {
+			has_global_flag = russia_dismantled
+			tag = RUS
+			OR = {
+				NOT = {
+					RUS = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					AKH = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					ALT = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					CPL = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					DON = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					KAZ = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					KMK = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					KRL = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					SIB = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					TAR = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					TNT = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					URA = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					YAK = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					UKR = {
+						all_core = {
+							OR = {
+								is_core = THIS
+								region = AUS_662
+							}
+						}
+					}
+				}
+				NOT = {
+					BYE = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					UBD = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					EST = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					LAT = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					LIT = {
+						all_core = {
+							OR = {
+								is_core = THIS
+								province_id = 698
+							}
+						}
+					}
+				}
+				NOT = {
+					CRI = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					BUK = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					KHI = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					TAJ = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					KYR = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					UZB = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					TKM = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					DAG = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					CHY = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					CIR = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					KAM = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					BRY = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			TKM = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			DAG = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CHY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CIR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			KAM = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			BRY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			OR = {
+				TKS = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							empty = yes
+						}
+					}
+				}
+				OR = {
+					AND = {
+						KAZ = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+						TAJ = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+						TKM = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+						UZB = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+						KYR = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+					}
+					AND = {
+						KOK = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+						BUK = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+						KHI = {
+							all_core = {
+								OR = {
+									owned_by = THIS
+									empty = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			URA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			YAK = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			UKR = {
+				all_core = {
+					OR = {
+						region = AUS_662
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			BYE = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			UBD = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			EST = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			LAT = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			LIT = {
+				all_core = {
+					OR = {
+						province_id = 698
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CRI = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			DAG = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CHY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CIR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			KAM = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			BRY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			RUS = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			AKH = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			ALT = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CPL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			DON = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			KMK = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			KRL = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			SIB = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			TAR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			TNT = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			URA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			YAK = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			UKR = {
+				all_core = {
+					OR = {
+						region = AUS_662
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			BYE = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			UBD = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			EST = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			LAT = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			LIT = {
+				all_core = {
+					OR = {
+						province_id = 698
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CRI = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			DAG = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CHY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			CIR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			KAM = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			BRY = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+		}
+		effect = {
+			RUS = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			AKH = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			ALT = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CPL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			DON = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KAZ = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KMK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KRL = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			SIB = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			TAR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			TNT = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			URA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			YAK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			UKR = {
+				all_core = {
+					limit = {
+						NOT = { region = AUS_662 }
+					}
+					add_core = THIS
+				}
+			}
+			BYE = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			UBD = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			EST = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			LAT = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			LIT = {
+				all_core = {
+					limit = {
+						NOT = { province_id = 698 }
+					}
+					add_core = THIS
+				}
+			}
+			CRI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BUK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KHI = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			TAJ = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KYR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			UZB = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			TKM = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			DAG = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CHY = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CIR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KAM = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BRY = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			KOK = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			clr_global_flag = russia_dismantled
+		}
+	}
+	france_regain_cores = {
+		potential = {
+			OR = {
+				tag = FRA
+				tag = BOR
+			}
+			has_global_flag = france_dismantled
+			OR = {
+				NOT = {
+					OCC = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					CRS = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					BRT = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			OR = {
+				FRA = {
+					all_core = {
+						owned_by = THIS
+					}
+				}
+				BOR = {
+					all_core = {
+						owned_by = THIS
+					}
+				}
+			}
+			OCC = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			CRS = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			BRT = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		effect = {
+			FRA = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BOR = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			OCC = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			CRS = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			BRT = {
+				all_core = {
+					add_core = THIS
+				}
+			}
+			clr_global_flag = france_dismantled
+		}
+	}
+	south_america_regain_cores = {
+		picture = switch_to_fraternity
+		potential = {
+			OR = {
+				NOT = { tag = USS }
+				has_country_flag = uss_successor
+			}
+			capital_scope = {
+				continent = south_america
+			}
+		}
+		allow = {
+			NOT = {
+				any_neighbor_country = {
+					any_owned_province = {
+						continent = south_america
+					}
+				}
+			}
+			any_owned_province = {
+				continent = south_america
+				NOT = { is_core = THIS }
+			}
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					continent = south_america
+				}
+				add_core = USS
+			}
+			change_tag = USS
+			clr_country_flag = uss_successor
+		}
+	}
+	iberia_regain_cores = {
+		picture = create_iberia
+		potential = {
+			OR = {
+				tag = IBR
+				tag = ATR
+				tag = BSQ
+				tag = GLC
+				tag = SPC
+				tag = CAT
+				tag = SPA
+				tag = POR
+			}
+			has_country_flag = got_dismantled
+			has_global_flag = created_iberia
+			OR = {
+				NOT = {
+					IBR = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					BSQ = {
+						all_core = {
+							OR = {
+								is_core = THIS
+								province_id = 460
+							}
+						}
+					}
+				}
+				NOT = {
+					SPC = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					CAT = {
+						all_core = {
+							OR = {
+								is_core = THIS
+								province_id = 464
+							}
+						}
+					}
+				}
+				NOT = {
+					SPA = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+				NOT = {
+					POR = {
+						all_core = {
+							is_core = THIS
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			OR = {
+				IBR = {
+					all_core = {
+						OR = {
+							NOT = { continent = europe }
+							owned_by = THIS
+						}
+					}
+				}
+				SPC = {
+					all_core = {
+						OR = {
+							NOT = { continent = europe }
+							owned_by = THIS
+						}
+					}
+				}
+				SPA = {
+					all_core = {
+						OR = {
+							NOT = { continent = europe }
+							owned_by = THIS
+						}
+					}
+				}
+			}
+			BSQ = {
+				all_core = {
+					OR = {
+						NOT = { continent = europe }
+						owned_by = THIS
+						province_id = 460
+					}
+				}
+			}
+			CAT = {
+				all_core = {
+					OR = {
+						NOT = { continent = europe }
+						owned_by = THIS
+						province_id = 464
+					}
+				}
+			}
+			POR = {
+				all_core = {
+					OR = {
+						NOT = { continent = europe }
+						owned_by = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			IBR = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			ATR = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			BSQ = {
+				all_core = {
+					limit = {
+						NOT = { province_id = 460 }
+					}
+					add_core = IBR
+				}
+			}
+			GLC = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			SPC = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			CAT = {
+				all_core = {
+					limit = {
+						NOT = { province_id = 464 }
+					}
+					add_core = IBR
+				}
+			}
+			SPA = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			POR = {
+				all_core = {
+					add_core = IBR
+				}
+			}
+			change_tag = IBR
+			clr_country_flag = got_dismantled
+		}
+	}
+	scandinavia_regain_cores = {
+		picture = form_scandinavia
+		potential = {
+			OR = {
+				tag = SWE
+				tag = DEN
+				tag = NOR
+				tag = ICL
+				tag = GRN
+				tag = FRO
+				tag = FIN
+				tag = EST
+				tag = SCA
+			}
+			has_global_flag = scandinavian_political_union
+			OR = {
+				NOT = {
+					SWE = {
+						all_core = {
+							is_core = SCA
+						}
+					}
+				}
+				NOT = {
+					DEN = {
+						all_core = {
+							is_core = SCA
+						}
+					}
+				}
+				NOT = {
+					NOR = {
+						all_core = {
+							is_core = SCA
+						}
+					}
+				}
+				NOT = {
+					ICL = {
+						all_core = {
+							is_core = SCA
+						}
+					}
+				}
+				NOT = {
+					GRN = {
+						all_core = {
+							is_core = SCA
+						}
+					}
+				}
+				NOT = {
+					FRO = {
+						all_core = {
+							is_core = SCA
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			SWE = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			DEN = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			NOR = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			ICL = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			GRN = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			FRO = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			SCA = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		effect = {
+			FIN = {
+				clr_country_flag = got_dismantled
+			}
+			SWE = {
+				clr_country_flag = got_dismantled
+				all_core = {
+					add_core = SCA
+				}
+			}
+			DEN = {
+				clr_country_flag = got_dismantled
+				all_core = {
+					add_core = SCA
+				}
+			}
+			NOR = {
+				clr_country_flag = got_dismantled
+				all_core = {
+					add_core = SCA
+				}
+			}
+			ICL = {
+				clr_country_flag = got_dismantled
+				all_core = {
+					add_core = SCA
+				}
+			}
+			GRN = {
+				clr_country_flag = got_dismantled
+				all_core = {
+					add_core = SCA
+				}
+			}
+			FRO = {
+				clr_country_flag = got_dismantled
+				all_core = {
+					add_core = SCA
+				}
+			}
+			change_tag = SCA
+		}
 	}
 }

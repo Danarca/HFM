@@ -3354,3 +3354,7 @@ gdl_social_2 = {
 	global_pop_militancy_modifier = 0.4
 	global_pop_consciousness_modifier = 0.4
 }
+
+promised_badboy_reduction_countdown = {
+	icon = 6
+}

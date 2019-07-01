@@ -47,10 +47,22 @@ dismantle_cb
 dismantle_cb_add
 dismantle_cb_add_new
 colonial_competition
-acquire_all_cores
-acquire_core_state
 restore_german_empire
 restore_austrian_empire
+restore_british_empire_annex
+restore_british_empire
+restore_russian_empire_annex
+restore_russian_empire
+restore_french_empire_annex
+restore_french_empire
+restore_south_american_empire_annex
+restore_south_american_empire
+restore_iberian_empire_annex
+restore_iberian_empire
+restore_scandinavian_empire_annex
+restore_scandinavian_empire
+acquire_all_cores
+acquire_core_state
 colonial_reconquest_cb
 restore_america
 claim_holy_land
@@ -8273,6 +8285,1359 @@ restore_german_empire = {
 	po_demand_state = yes
 	
 	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_british_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		has_global_flag = british_dismantled
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = ENG
+				tag = ENL
+			}
+		}
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		any_owned_province = {
+			OR = {
+				is_core = ENG
+				is_core = SCO
+				is_core = WHA
+				is_core = IRE
+				is_core = CAN
+				is_core = SAF
+				is_core = HND
+				is_core = AST
+				is_core = NZL
+				is_core = NEW
+			}
+		}
+		NOT = {
+			OR = {
+				NOT = {
+					any_owned_province = {
+						NOT = { is_core = HND }
+					}
+				}
+				tag = SCO
+				tag = WHA
+				tag = IRE
+				tag = CAN
+				tag = SAF
+				tag = HND
+				tag = AST
+				tag = NZL
+				tag = NEW
+				primary_culture = anglo_canadian
+				primary_culture = afro_caribbean
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				is_core = ENG
+				is_core = SCO
+				is_core = WHA
+				is_core = IRE
+				is_core = CAN
+				is_core = SAF
+				is_core = HND
+				is_core = AST
+				is_core = NZL
+				is_core = NEW
+			}
+		}
+	}
+	
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_russian_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			tag = RUS
+			has_global_flag = russia_dismantled
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+		}
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		any_owned_province = {
+			OR = {
+				is_core = RUS
+				is_core = AKH
+				is_core = ALT
+				is_core = CPL
+				is_core = DON
+				is_core = IZH
+				is_core = KAZ
+				is_core = KMK
+				is_core = KRL
+				is_core = SIB
+				is_core = TAR
+				is_core = TNT
+				is_core = URA
+				is_core = YAK
+				is_core = UKR
+				is_core = BYE
+				is_core = UBD
+				is_core = EST
+				is_core = LAT
+				is_core = LIT
+				is_core = CRI
+				is_core = BUK
+				is_core = KHI
+				is_core = KOK
+				is_core = TAJ
+				is_core = KYR
+				is_core = UZB
+				is_core = TKM
+				is_core = TKS
+				is_core = DAG
+				is_core = CHY
+				is_core = CIR
+				is_core = KAM
+				is_core = BRY
+			}
+			NOT = {
+				OR = {
+					region = AUS_662
+					province_id = 698
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				tag = AKH
+				tag = ALT
+				tag = CPL
+				tag = DON
+				tag = IZH
+				tag = KAZ
+				tag = KMK
+				tag = KRL
+				tag = SIB
+				tag = TAR
+				tag = TNT
+				tag = URA
+				tag = YAK
+				tag = UKR
+				tag = BYE
+				tag = UBD
+				tag = EST
+				tag = LAT
+				tag = LIT
+				tag = CRI
+				tag = BUK
+				tag = KHI
+				tag = KOK
+				tag = TAJ
+				tag = KYR
+				tag = UZB
+				tag = TKM
+				tag = TKS
+				tag = DAG
+				tag = CHY
+				tag = CIR
+				tag = KAM
+				tag = BRY
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				is_core = RUS
+				is_core = AKH
+				is_core = ALT
+				is_core = CPL
+				is_core = DON
+				is_core = IZH
+				is_core = KAZ
+				is_core = KMK
+				is_core = KRL
+				is_core = SIB
+				is_core = TAR
+				is_core = TNT
+				is_core = URA
+				is_core = YAK
+				is_core = UKR
+				is_core = BYE
+				is_core = UBD
+				is_core = EST
+				is_core = LAT
+				is_core = LIT
+				is_core = CRI
+				is_core = BUK
+				is_core = KHI
+				is_core = KOK
+				is_core = TAJ
+				is_core = KYR
+				is_core = UZB
+				is_core = TKM
+				is_core = TKS
+				is_core = DAG
+				is_core = CHY
+				is_core = CIR
+				is_core = KAM
+				is_core = BRY
+			}
+			NOT = {
+				OR = {
+					region = AUS_662
+					province_id = 698
+				}
+			}
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_french_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = FRA
+				tag = BOR
+			}
+		}
+		has_global_flag = france_dismantled
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		any_owned_province = {
+			OR = {
+				is_core = FRA
+				is_core = BOR
+				is_core = OCC
+				is_core = LOR
+				is_core = CRS
+				is_core = BRT
+				region = FRA_399
+				region = FRA_406
+				region = FRA_404
+				region = FRA_411
+				region = FRA_432
+				region = FRA_418
+				region = FRA_420
+				region = FRA_425
+				region = FRA_428
+				region = FRA_435
+				region = FRA_438
+				region = FRA_442
+				region = FRA_445
+				region = FRA_448
+				region = FRA_451
+				region = FRA_455
+				region = FRA_458
+				region = FRA_461
+				region = SAR_466
+				region = FRA_467
+			}
+		}
+		NOT = {
+			OR = {
+				NOT = {
+					any_owned_province = {
+						NOT = { 
+							is_core = FRA
+							is_core = BOR
+							is_core = OCC
+							is_core = LOR
+							is_core = CRS
+							is_core = BRT
+						}
+					}
+				}
+				tag = FRA
+				tag = BOR
+				tag = OCC
+				tag = LOR
+				tag = CRS
+				tag = BRT
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				is_core = FRA
+				is_core = BOR
+				is_core = OCC
+				is_core = LOR
+				is_core = CRS
+				is_core = BRT
+			}
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_british_empire_annex = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+		}
+		THIS = {
+			OR = {
+				tag = ENG
+				tag = ENL
+			}
+		}
+		has_global_flag = british_dismantled
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+			OR = {
+				NOT = {
+					any_owned_province = {
+						NOT = { is_core = HND }
+					}
+				}
+				tag = SCO
+				tag = WHA
+				tag = IRE
+				tag = CAN
+				tag = SAF
+				tag = HND
+				tag = AST
+				tag = NZL
+				tag = NEW
+				primary_culture = anglo_canadian
+				primary_culture = afro_caribbean
+			}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_russian_empire_annex = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			tag = RUS
+		}
+		has_global_flag = russia_dismantled
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		OR = {
+			tag = AKH
+			tag = ALT
+			tag = CPL
+			tag = DON
+			tag = IZH
+			tag = KAZ
+			tag = KMK
+			tag = KRL
+			tag = SIB
+			tag = TAR
+			tag = TNT
+			tag = URA
+			tag = YAK
+			tag = UKR
+			tag = BYE
+			tag = UBD
+			tag = EST
+			tag = LAT
+			tag = LIT
+			tag = CRI
+			tag = BUK
+			tag = KHI
+			tag = KOK
+			tag = TAJ
+			tag = KYR
+			tag = UZB
+			tag = TKM
+			tag = TKS
+			tag = DAG
+			tag = CHY
+			tag = CIR
+			tag = KAM
+			tag = BRY
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_french_empire_annex = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = FRA
+				tag = BOR
+			}
+		}
+		has_global_flag = france_dismantled
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		OR = {
+			tag = FRA
+			tag = BOR
+			tag = OCC
+			tag = LOR
+			tag = CRS
+			tag = BRT
+			is_culture_group = THIS
+			primary_culture = french_canadian
+			primary_culture = neo_zelandais
+			primary_culture = louisianan
+			primary_culture = cajun
+			
+		}
+				
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_scandinavian_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = SCA
+				tag = DEN
+				tag = NOR
+				tag = SWE
+				tag = ICL
+				tag = GRN
+				tag = FRO
+				AND = {
+					has_global_flag = finland_in_scandinavia
+					tag = FIN
+				}
+				AND = {
+					has_global_flag = estonia_in_scandinavia
+					tag = EST
+				}
+			}
+		}
+		OR = {
+			SCA = {
+				has_country_flag = got_dismantled
+			}
+			DEN = {
+				has_country_flag = got_dismantled
+			}
+			NOR = {
+				has_country_flag = got_dismantled
+			}
+			SWE = {
+				has_country_flag = got_dismantled
+			}
+			FIN = {
+				has_country_flag = got_dismantled
+			}
+		}
+		has_global_flag = scandinavian_political_union
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		any_owned_province = {
+			OR = {
+				is_core = SCA
+				is_core = DEN
+				is_core = NOR
+				is_core = SWE
+				is_core = ICL
+				is_core = GRN
+				is_core = FRO
+				AND = {
+					has_global_flag = finland_in_scandinavia
+					is_core = FIN
+				}
+				AND = {
+					has_global_flag = estonia_in_scandinavia
+					is_core = EST
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				NOT = {
+					any_owned_province = {
+						NOT = { 
+							is_core = SCA
+							is_core = DEN
+							is_core = NOR
+							is_core = SWE
+							is_core = ICL
+							is_core = GRN
+							is_core = FRO
+							AND = {
+								has_global_flag = finland_in_scandinavia
+								is_core = FIN
+							}
+							AND = {
+								has_global_flag = estonia_in_scandinavia
+								is_core = EST
+							}	
+						}
+					}
+				}
+				tag = SCA
+				tag = DEN
+				tag = NOR
+				tag = SWE
+				tag = ICL
+				tag = GRN
+				tag = FRO
+				AND = {
+					has_global_flag = finland_in_scandinavia
+					tag = FIN
+				}
+				AND = {
+					has_global_flag = estonia_in_scandinavia
+					tag = EST
+				}
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				is_core = SCA
+				is_core = DEN
+				is_core = NOR
+				is_core = SWE
+				is_core = ICL
+				is_core = GRN
+				is_core = FRO
+				AND = {
+					has_global_flag = finland_in_scandinavia
+					is_core = FIN
+				}
+				AND = {
+					has_global_flag = estonia_in_scandinavia
+					is_core = EST
+				}	
+			}
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_scandinavian_empire_annex = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = SCA
+				tag = DEN
+				tag = NOR
+				tag = SWE
+				tag = ICL
+				tag = GRN
+				tag = FRO
+				AND = {
+					has_global_flag = finland_in_scandinavia
+					tag = FIN
+				}
+				AND = {
+					has_global_flag = estonia_in_scandinavia
+					tag = EST
+				}
+			}
+		}
+		OR = {
+			SCA = {
+				has_country_flag = got_dismantled
+			}
+			DEN = {
+				has_country_flag = got_dismantled
+			}
+			NOR = {
+				has_country_flag = got_dismantled
+			}
+			SWE = {
+				has_country_flag = got_dismantled
+			}
+			FIN = {
+				has_country_flag = got_dismantled
+			}
+		}
+		has_global_flag = scandinavian_political_union
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		OR = {
+			tag = SCA
+			tag = DEN
+			tag = NOR
+			tag = SWE
+			tag = GRN
+			tag = ICL
+			tag = FRO
+			AND = {
+				has_global_flag = finland_in_scandinavia
+				tag = FIN
+			}
+			AND = {
+				has_global_flag = estonia_in_scandinavia
+				tag = EST
+			}
+			is_culture_group = scandinavian
+		}
+				
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_iberian_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = IBR
+				tag = ATR
+				tag = BSQ
+				tag = GLC
+				tag = SPC
+				tag = CAT
+				tag = SPA
+				tag = POR
+			}
+			has_country_flag = got_dismantled
+		}
+		has_global_flag = created_iberia
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		any_owned_province = {
+			OR = {
+				is_core = IBR
+				is_core = ATR
+				is_core = BSQ
+				is_core = GLC
+				is_core = SPC
+				is_core = CAT
+				is_core = SPA
+				is_core = POR
+			}
+			NOT = {
+				OR = {
+					province_id = 460
+					province_id = 464
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				NOT = {
+					any_owned_province = {
+						NOT = { 
+							is_core = IBR
+							is_core = ATR
+							is_core = BSQ
+							is_core = GLC
+							is_core = SPC
+							is_core = CAT
+							is_core = SPA
+							is_core = POR
+						}
+					}
+				}
+				tag = IBR
+				tag = ATR
+				tag = BSQ
+				tag = GLC
+				tag = SPC
+				tag = CAT
+				tag = SPA
+				tag = POR
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				is_core = IBR
+				is_core = ATR
+				is_core = BSQ
+				is_core = GLC
+				is_core = SPC
+				is_core = CAT
+				is_core = SPA
+				is_core = POR
+			}
+			NOT = {
+				OR = {
+					province_id = 460
+					province_id = 464
+				}
+			}
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_iberian_empire_annex = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			OR = {
+				tag = IBR
+				tag = ATR
+				tag = BSQ
+				tag = GLC
+				tag = SPC
+				tag = CAT
+				tag = SPA
+				tag = POR
+			}
+			has_country_flag = got_dismantled
+		}
+		has_global_flag = created_iberia
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		OR = {
+			tag = IBR
+			tag = ATR
+			tag = BSQ
+			tag = GLC
+			tag = SPC
+			tag = CAT
+			tag = SPA
+			tag = POR
+		}
+				
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_south_american_empire = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			capital_scope = {
+				continent = south_america
+			}
+			has_country_flag = uss_successor
+		}
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		any_owned_province = {
+			continent = south_america
+		}
+		NOT = {
+			capital_scope = {
+				continent = south_america
+			}
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+	
+	allowed_states = {
+		any_owned_province = {
+			continent = south_america
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_AUSTRIAN_EMPIRE_NAME
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+restore_south_american_empire_annex = {
+	sprite_index = 21
+	is_triggered_only = yes
+	months = 12
+	
+	construction_speed = 0.8
+
+	badboy_factor = 0
+	prestige_factor = 2
+	peace_cost_factor = 0.7
+	penalty_factor = 1
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		THIS = {
+			OR = {
+				war_policy = jingoism
+				war_policy = pro_military
+			}
+			capital_scope = {
+				continent = south_america
+			}
+			has_country_flag = uss_successor
+		}
+		OR = {
+			AND = { 
+				THIS = { num_of_ports = 1 } 
+				num_of_ports = 1
+			}
+			neighbour = THIS
+			AND = { war_with = THIS ai = no }
+		}
+		is_vassal = no
+		capital_scope = {
+			continent = south_america
+		}
+		NOT = { has_country_modifier = neutrality }
+		NOT = { in_sphere = THIS }
+		THIS = { NOT = { has_country_modifier = neutrality } }
+		OR = {
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = punitive_effects } }
+		}
+	}
+
+	po_annex = yes
+	
+	war_name = WAR_RESTORE_ORDER_NAME
 	
 	on_add = {
 		move_issue_percentage = { 

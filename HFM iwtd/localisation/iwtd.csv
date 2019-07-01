@@ -2,11 +2,11 @@
 access_through_suez_title;Access through the Suez;;;;;;;;;;;;;x
 access_through_suez_desc;We don't currently have access through the Suez to our holdings on the other side of it. This is a violation of the Suez treaty. We should send a stern letter.;;;;;;;;;;;;;x
 EVTNAME42404;The people demand war!;;;;;;;;;;;;;x
-EVTDESC42404;One of the great nations has comitted many a sinful deed, too many now. People all over the world are in the streets, demanding that their governments put this pariah in their place! We can either declare war, which would be looked upon with favour, or we can delay our entry into this war. There's no staying out of this one, without pissing off everybody.;;;;;;;;;;;;;x
+EVTDESC42404;One of the great nations has comitted many a sinful deed, too many now. People all over the world are in the streets, demanding that their governments put this pariah in their place! There's no staying out of this one.;;;;;;;;;;;;;x
 EVTOPTA42404;War it is!;;;;;;;;;;;;;x
 EVTOPTB42404;Let's stay out of it;;;;;;;;;;;;;x
 EVTNAME42405;The people demand war!;;;;;;;;;;;;;x
-EVTDESC42405;Our ally has comitted many a sinful deed, too many now. People all over the world are in the streets, demanding that their governments put this pariah in their place! We can either declare war, which would be looked upon with favour, or we can delay our entry into this war. There's no staying out of this one, without pissing off everybody.;;;;;;;;;;;;;x
+EVTDESC42405;Our ally has comitted many a sinful deed, too many now. People all over the world are in the streets, demanding that their governments put this pariah in their place! There's no staying out of this one.;;;;;;;;;;;;;x
 EVTOPTA42405;Sorry...;;;;;;;;;;;;;x
 EVTNAME42407;War declaration from $FROMCOUNTRY$;x
 EVTDESC42407;$FROMCOUNTRY$ has joined the coalition against us!;x
@@ -33,17 +33,28 @@ EVTOPTA42413;A Just Cause!;x
 EVTNAME42414;The Dissolution of Germany;x
 EVTDESC42414;After the unsuccesful unification of all German people, the nation of Germany is no more. Instead, they will be split along North German, Austrian and South German lines.;x
 EVTOPTA42414;The end of a Dream;x
-gdl_military_1;Großdeutschland Military Penalty;x
-gdl_military_2;Reduced Großdeutschland Military Penalty;x
-gdl_economic_1;Großdeutschland Economic Penalty;x
-gdl_economic_2;Reduced Großdeutschland Economic Penalty;x
-gdl_social_1;Großdeutschland Social Penalty;x
-gdl_social_2;Reduced Großdeutschland Social Penalty;x
-gdl_timer;Großdeutschland Timer;x
+EVTNAME42415;Expansion Problems;x
+EVTDESC42415;The rapid expansion we've been going through has not gone unnoticed.\nThe other Great Powers has given us 30 days to return territories before going to war with us.;x
+EVTOPTA42415;This isn't good...;x
+EVTNAME42416;War Declaration;x
+EVTDESC42416;With their warnings gone unnoticed by us, the Great powers have declared war upon our nation!;x
+EVTOPTA42416;This isn't good...;x
+EVTNAME42417;Deadline Kept;x
+EVTDESC42417;We have bowed to the demands of the Great Powers, and made amends.\nWe got lucky this time.;x
+EVTOPTA42417;Phew!;x
+gdl_military_1;GroÃŸdeutschland Military Penalty;x
+gdl_military_2;Reduced GroÃŸdeutschland Military Penalty;x
+gdl_economic_1;GroÃŸdeutschland Economic Penalty;x
+gdl_economic_2;Reduced GroÃŸdeutschland Economic Penalty;x
+gdl_social_1;GroÃŸdeutschland Social Penalty;x
+gdl_social_2;Reduced GroÃŸdeutschland Social Penalty;x
+gdl_timer;GroÃŸdeutschland Timer;x
 gdl_timer_desc;When this is done, you can reform again.;x
 ger_dissolved;Germany Dissolved;x
 ger_dissolved_desc;Germany has been dissolved, we have been defeated...;x
 gdl_austrian_provinces;Former Austrian Province;x
+promised_badboy_reduction_countdown;Great Powers deadline;x
+promised_badboy_reduction_countdown_desc;We only have a limited time to return territories.;x
 reduce_gdl_military_title;Reduce Military Penalties;x
 reduce_gdl_economy_title;Reduce Economic Penalties;x
 reduce_gdl_social_title;Reduce Social Penalties;x
@@ -58,17 +69,83 @@ remove_gdl_economy_desc;By integrating the German and Austrian economies we can 
 remove_gdl_social_desc;By integrating the Austrian people we can remove some of these penalties that currently have to live with.;x
 gdl_reforms_finished_title;Finish Reforms;x
 gdl_reforms_finished_desc;After many years, we have finally integrated Austria into Germany, this is a glorious day!;x
-ger_cores_return_title;Begin die Rückeroberung;x
-ger_cores_return_desc;Our People has been clamoring for the concept of die Rückeroberung, the Reconquest.\nThe first Phase will simply be re-uniting the German Federations, into the Germany of old...;x
-ger_reunification_title;Continuation of die Rückeroberung;x
+ger_cores_return_title;Begin die RÃ¼ckeroberung;x
+ger_cores_return_desc;Our People has been clamoring for the concept of die RÃ¼ckeroberung, the Reconquest.\nThe first Phase will simply be re-uniting the German Federations, into the Germany of old...;x
+ger_reunification_title;Continuation of die RÃ¼ckeroberung;x
 ger_reunification_desc;With the heartland of Germany unified, we can defy the Treaty of Berlin and re-declare the formation of Germany!\nHowever, lot of work lay ahead of us...;x
-ger_return_cores_title;Finish die Rückeroberung;x
+ger_return_cores_title;Finish die RÃ¼ckeroberung;x
 ger_return_cores_desc;We have conquered the petty remnants of the Treaty of Berlin.\nWe can now force the Great Powers to accept our claims!;x
+ussa_unite_brazil_title;Apply for Brazillian statehood;x
+ussa_unite_brazil_desc;The dismantlement treaty left us a rump state. We should apply for Brazillian statehood, for our own protection.;x
+brazil_inherit_uss_title;Accept statehood;x
+brazil_inherit_uss_desc;The rump state that used to encompass the entire continent is applying for statehood... How the mighty have fallen!;x
+britain_regain_cores_title;Triumph over Britain;x
+britain_regain_cores_desc;With our position in Britain solid after the Dismantlement, we can force the other Great Powers to accept it!;x
+russia_regain_cores_title;Triumph in Russia;x
+russia_regain_cores_desc;With our position in Russia solid after the Dismantlement, we can force the other Great Powers to accept it!;x
+france_regain_cores_title;Triumph in France;x
+france_regain_cores_desc;With our position in France solid after the Dismantlement, we can force the other Great Powers to accept it!;x
+south_america_regain_cores_title;Triumph in South America;x
+south_america_regain_cores_desc;With our position in South America solid after the Dismantlement, we can force the other Great Powers to accept it!;x
+iberia_regain_cores_title;Triumph in Iberia;x
+iberia_regain_cores_desc;With our position in Iberia solid after the Dismantlement, we can force the other Great Powers to accept it!;x
+iberia_regain_cores_title;Triumph in Iberia;x
+iberia_regain_cores_desc;With our position in Iberia solid after the Dismantlement, we can force the other Great Powers to accept it!;x
+scandinavia_regain_cores_title;Triumph in Scandinavia;x
+scandinavia_regain_cores_desc;With our position in Scandinavia solid after the Dismantlement, we can force the other Great Powers to accept it!;x
 dismantle_ger;Dismantle Germany;x
 dismantle_ger_desc;Force Germany to split up;x
 dismantle_ger_setup;Germany will cease to exist;x
 dismantle_ger_short;Dismantle Germany;x
-restore_german_empire;Die Rückeroberung;x
+restore_german_empire;Die RÃ¼ckeroberung;x
 restore_german_empire_desc;Conquer former German state;x
-restore_german_empire_setup;Die Rückeroberung continues;x
-restore_german_empire_short;Die Rückeroberung;x
+restore_german_empire_setup;Die RÃ¼ckeroberung continues;x
+restore_german_empire_short;Die RÃ¼ckeroberung;x
+restore_british_empire;Reconquer Our Province;x
+restore_british_empire_short;Reacquire $STATE$;x
+restore_british_empire_setup;Reacquire $STATE$ from $RECIPIENT$;x
+restore_british_empire_desc;Reacquire an enemy state;x
+restore_british_empire_annex;Restore the British Empire;x
+restore_british_empire_annex_short;Annex $RECIPIENT$;x
+restore_british_empire_annex_setup;Annex $RECIPIENT$;x
+restore_british_empire_annex_desc;Annex a foreign country.;x
+restore_russian_empire;Reconquer Our Province;x
+restore_russian_empire_short;Reacquire $STATE$;x
+restore_russian_empire_setup;Reacquire $STATE$ from $RECIPIENT$;x
+restore_russian_empire_desc;Reacquire an enemy state;x
+restore_russian_empire_annex;Restore the Russian Empire;x
+restore_russian_empire_annex_short;Annex $RECIPIENT$;x
+restore_russian_empire_annex_setup;Annex $RECIPIENT$;x
+restore_russian_empire_annex_desc;Annex a foreign country.;x
+restore_french_empire;Reconquer Our Province;x
+restore_french_empire_short;Reacquire $STATE$;x
+restore_french_empire_setup;Reacquire $STATE$ from $RECIPIENT$;x
+restore_french_empire_desc;Reacquire an enemy state;x
+restore_french_empire_annex;Restore the French Empire;x
+restore_french_empire_annex_short;Annex $RECIPIENT$;x
+restore_french_empire_annex_setup;Annex $RECIPIENT$;x
+restore_french_empire_annex_desc;Annex a foreign country.;x
+restore_south_american_empire;Reconquer Our Province;x
+restore_south_american_empire_short;Reacquire $STATE$;x
+restore_south_american_empire_setup;Reacquire $STATE$ from $RECIPIENT$;x
+restore_south_american_empire_desc;Reacquire an enemy state;x
+restore_south_american_empire_annex;Restore the South American Empire;x
+restore_south_american_empire_annex_short;Annex $RECIPIENT$;x
+restore_south_american_empire_annex_setup;Annex $RECIPIENT$;x
+restore_south_american_empire_annex_desc;Annex a foreign country.;x
+restore_iberian_empire;Reconquer Our Province;x
+restore_iberian_empire_short;Reacquire $STATE$;x
+restore_iberian_empire_setup;Reacquire $STATE$ from $RECIPIENT$;x
+restore_iberian_empire_desc;Reacquire an enemy state;x
+restore_iberian_empire_annex;Restore the Iberian Empire;x
+restore_iberian_empire_annex_short;Annex $RECIPIENT$;x
+restore_iberian_empire_annex_setup;Annex $RECIPIENT$;x
+restore_iberian_empire_annex_desc;Annex a foreign country.;x
+restore_scandinavian_empire;Reconquer Our Province;x
+restore_scandinavian_empire_short;Reacquire $STATE$;x
+restore_scandinavian_empire_setup;Reacquire $STATE$ from $RECIPIENT$;x
+restore_scandinavian_empire_desc;Reacquire an enemy state;x
+restore_scandinavian_empire_annex;Restore the Scandinavian Empire;x
+restore_scandinavian_empire_annex_short;Annex $RECIPIENT$;x
+restore_scandinavian_empire_annex_setup;Annex $RECIPIENT$;x
+restore_scandinavian_empire_annex_desc;Annex a foreign country.;x
