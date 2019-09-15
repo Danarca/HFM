@@ -1,7 +1,7 @@
 # Historical Flavour Mod - I want to die
 Current Version: 
 - HFM 1.27I Beta
-- IWTD v. 1
+- IWTD v. 2-alpha
 
 Mission: Implement the "I want to die" multiplayer groups house rules & house changes to HFM.
 
