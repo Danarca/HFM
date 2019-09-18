@@ -1,0 +1,283 @@
+country_event = {
+	id = 4413218
+	title = "Self-Determination for African Americans?"
+	desc = "EVTDESC4413218"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Self-determination is segregation!"
+		add_accepted_culture = afro_american
+		any_pop = {
+			limit = {
+				OR = {
+					culture = dixie
+					culture = afro_american
+				}
+			}
+			consciousness = 3
+			militancy = 3
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "African Americans deserve their own destiny."
+		remove_accepted_culture = afro_american
+		any_pop = {
+			limit = {
+				culture = dixie
+			}
+			consciousness = 6
+			militancy = 6
+		}
+		any_pop = {
+			limit = {
+				culture = afro_american
+			}
+			consciousness = -5
+			militancy = -5
+			ideology = {
+				value = communist
+				factor = 0.25
+			}
+		}
+		country_event = 44132189
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = {
+	id = 44132189
+	title = "The Size of New Africa?"
+	desc = "EVTDESC44132189"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Louisiana and Mississippi."
+		USA_139 = { add_core = NAF } #Louisiana
+		USA_194 = { add_core = NAF } #Mississippi
+		NAF = { capital = 140 }
+		badboy = -2
+		country_event = 4413220
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "Louisiana, Mississippi, Alabama, and Western Florida."
+		USA_139 = { add_core = NAF } #Louisiana
+		USA_194 = { add_core = NAF } #Mississippi
+		USA_196 = { add_core = NAF } #Alabama
+		198 = { add_core = NAF }
+		badboy = -5
+		country_event = 4413220
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "New Africa shall encompass the Lower South!"
+		USA_139 = { add_core = NAF } #Louisiana
+		USA_194 = { add_core = NAF } #Mississippi
+		USA_196 = { add_core = NAF } #Alabama
+		USA_200 = { add_core = NAF } #Florida
+		USA_201 = { add_core = NAF } #Georgia
+		USA_205 = { add_core = NAF } #South Carolina
+		badboy = -10
+		country_event = 4413220
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 4413220
+	title = "The Formation of New Africa"
+	desc = "EVTDESC4413220"
+	is_triggered_only = yes
+	
+	option = {
+		name = "A new day for the Union."
+		prestige = 20
+		release_vassal = NAF
+		create_alliance = NAF
+		diplomatic_influence = {
+			who = NAF
+			value = 400
+		}
+		NAF = {
+			any_pop = {
+				limit = {
+					culture = afro_american 
+				}
+				ideology = {
+					value = communist
+					factor = 0.10
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "Follow the North Star of Communism!"
+		prestige = 20
+		release_vassal = NAF
+		create_alliance = NAF
+		diplomatic_influence = {
+			who = NAF
+			value = 400
+		}
+		NAF = {
+			any_pop = {
+				limit = {
+					culture = afro_american 
+				}
+				ideology = {
+					value = communist
+					factor = 0.10
+				}
+			}
+		}
+		change_tag_no_core_switch = NAF
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 4413221
+	title = "The Manifest Destiny of New Africa"
+	desc = "EVTDESC4413221"
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "Into the Caribbean!"
+		add_accepted_culture = afro_caribbean
+		add_accepted_culture = afro_caribeno
+		SPA_2209 = { add_core = NAF } 
+		ENG_203 = { add_core = NAF } 
+		ENG_2224 = { add_core = NAF } 
+		ENG_2228 = { add_core = NAF } 
+		badboy = 10
+		ai_chance = {
+			factor = 75
+		}
+	}
+	
+	option = {
+		name = "The South is our land!"
+		USA_144 = { add_core = NAF } #Arkansas
+		USA_148 = { add_core = NAF } #Missouri
+		USA_185 = { add_core = NAF } #Kentucky
+		USA_188 = { add_core = NAF } #Tennessee
+		USA_2556 = { add_core = NAF } #North Carolina
+		USA_211 = { add_core = NAF } #Virginia
+		USA_218 = { add_core = NAF } #West Virginia
+		USA_219 = { add_core = NAF } #Maryland
+		badboy = 15
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "The Caribbean and the South!"
+		add_accepted_culture = afro_caribbean
+		add_accepted_culture = afro_caribeno
+		SPA_2209 = { add_core = NAF } 
+		ENG_203 = { add_core = NAF } 
+		ENG_2224 = { add_core = NAF } 
+		ENG_2228 = { add_core = NAF } 
+		USA_144 = { add_core = NAF } #Arkansas
+		USA_148 = { add_core = NAF } #Missouri
+		USA_185 = { add_core = NAF } #Kentucky
+		USA_188 = { add_core = NAF } #Tennessee
+		USA_2556 = { add_core = NAF } #North Carolina
+		USA_211 = { add_core = NAF } #Virginia
+		USA_218 = { add_core = NAF } #West Virginia
+		USA_219 = { add_core = NAF } #Maryland
+		badboy = 25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+country_event = {
+	id = 4413222
+	title = "The Integration of White Americans"
+	desc = "EVTDESC4413222"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Limited Integration"
+		add_accepted_culture = yankee
+		any_pop = {
+			limit = {
+				culture = afro_american
+				ideology = fascist
+			}
+			consciousness = 5
+			militancy = 5
+		}
+		any_pop = {
+			limit = {
+				culture = yankee
+			}
+			consciousness = -7
+			militancy = -7
+		}
+	}
+	option = {
+		name = "Full Integration"
+		add_accepted_culture = yankee
+		add_accepted_culture = dixie
+		any_pop = {
+			limit = {
+				culture = afro_american
+				ideology = fascist
+			}
+			consciousness = 5
+			militancy = 5
+		}
+		any_pop = {
+			limit = {
+				culture = afro_american
+			}
+			consciousness = 3
+			militancy = 3
+			ideology = {
+				value = fascist
+				factor = 0.05
+			}
+		}
+		any_pop = {
+			limit = {
+				culture = yankee
+			}
+			consciousness = -7
+			militancy = -7
+		}
+		any_pop = {
+			limit = {
+				culture = dixie
+			}
+			consciousness = -7
+			militancy = -7
+		}
+	}
+}
+	

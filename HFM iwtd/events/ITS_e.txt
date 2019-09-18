@@ -1,0 +1,23 @@
+country_event = {
+	id = 4609326
+	title = "Replace Cores"
+	desc = EVTDESC4609326
+	
+	trigger = {
+		tag = ITA
+		ITA = { exists = no }
+		has_global_flag = ITS_form
+		any_core = {
+			is_core = ITA
+		}
+	}
+	
+	option = {
+		name = "ok"
+		ITA = { all_core = { add_core = ITS } }
+		ITA = { all_core = { remove_core = ITA } }
+	}
+	ai_chance = {
+		factor = 100
+	}
+}

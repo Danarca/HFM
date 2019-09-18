@@ -918,6 +918,7 @@ country_event = {
 	
 	option = {
 		name = "EVT44154OPTA"
+		set_global_flag = USA_claimoregon
 		prestige = -20
 		USA = { country_event = 44155 }
 		relation = { who = USA value = 50 }
@@ -968,6 +969,7 @@ country_event = {
 	
 	option = {
 		name = "EVT44154OPTB"
+		set_global_flag = USA_claimoregon
 		set_country_flag = oregon_war
 		prestige = 5
 		leave_alliance = USA
