@@ -3358,3 +3358,8 @@ gdl_social_2 = {
 promised_badboy_reduction_countdown = {
 	icon = 6
 }
+
+uss_integrated_culture_cooldown = {
+	icon = 6
+	tax_efficiency = -0.05
+}
