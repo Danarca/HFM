@@ -578,7 +578,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = uss_integrated_culture_cooldown
-				duration = 1564
+				duration = 1825
 			}
 			add_accepted_culture = afro_caribeno
 			add_accepted_culture = afro_brazilian
@@ -894,7 +894,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = uss_integrated_culture_cooldown
-				duration = 1564
+				duration = 1825
 			}
 			add_accepted_culture = brazilian
 			any_pop = {
@@ -939,7 +939,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = uss_integrated_culture_cooldown
-				duration = 1564
+				duration = 1825
 			}
 			add_accepted_culture = platinean
 			any_pop = {
@@ -984,7 +984,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = uss_integrated_culture_cooldown
-				duration = 1564
+				duration = 1825
 			}
 			add_accepted_culture = north_andean
 			any_pop = {
@@ -1030,7 +1030,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = uss_integrated_culture_cooldown
-				duration = 1564
+				duration = 1825
 			}
 			add_accepted_culture = south_andean
 			any_pop = {
@@ -1075,7 +1075,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = {
 				name = uss_integrated_culture_cooldown
-				duration = 1564
+				duration = 1825
 			}
 			add_accepted_culture = caribeno
 			any_pop = {
