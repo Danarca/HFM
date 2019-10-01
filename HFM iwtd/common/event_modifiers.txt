@@ -3360,6 +3360,6 @@ promised_badboy_reduction_countdown = {
 }
 
 uss_integrated_culture_cooldown = {
-	icon = 6
+	icon = 4
 	tax_efficiency = -0.05
 }
