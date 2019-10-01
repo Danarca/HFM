@@ -773,7 +773,7 @@ pit_coal = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 0.8
+			coal = 1.05
 		}
 	}
 }
@@ -792,7 +792,7 @@ coke = {
 	}
 	effect = {
 		rgo_goods_output = {
-			coal = 1.5
+			coal = 1.95
 		}
 	}
 }
