@@ -1,6 +1,7 @@
 # Historical Flavour Mod - I want to die
 Current Version: 
 - HFM 1.27I Beta
+- HFM More Stuff Mod v. 3
 - IWTD v. 2
 
 Mission: Implement the "I want to die" multiplayer groups house rules & house changes to HFM.
@@ -27,7 +28,15 @@ Changes:
 	Added Balkanisation of Germany and possible reformation
 	
 	A number of countries can reclaim lost lands after getting dismantled, and can gain cores on them after reconquering them all back
-	-These are; Britain (special case, can reconquer colonies but doesnt get cores on them), Russia, France, South America (with more stuff mod), Iberia (again with more stuff) and Scandinavia
+	-These are; Britain (special case, can reconquer colonies but doesnt get cores on them), Russia, France, South America, Iberia and Scandinavia
+	
+	South America can gradually accept South American cultures
+	
+	Population grows more slowly, and is more vulnearable in wars. Wage war with care!
+	
+	New main theme, bonus points if you know what it is!
+	
+	
 
 Roadmap:
 
